@@ -1,7 +1,7 @@
-name: "VSA oprator properties"
+name: VSA operator properties
 output_dir: ../docs
 navbar:
-  title: "VSA oprator properties"
+  title: VSA operator properties
   left:
   - text: Home
     href: index.html
@@ -9,6 +9,10 @@ navbar:
     href: about.html
   - text: License
     href: license.html
+  right:
+  - icon: fa-github
+    text: Source code
+    href: https://github.com/rgayler/VSA_op_properties
 output:
   workflowr::wflow_html:
     toc: yes
