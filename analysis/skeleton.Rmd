@@ -1,0 +1,14 @@
+---
+title: "Skeleton of paper"
+author: "Ross Gayler"
+date: "2020-06-10"
+output: workflowr::wflow_html
+editor_options:
+  chunk_output_type: console
+---
+
+This is the skeleton of the output paper.
+
+## Introduction
+
+

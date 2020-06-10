@@ -1,0 +1,23 @@
+---
+title: "Simulations"
+author: "Ross Gayler"
+date: "2020-06-10"
+output: workflowr::wflow_html
+editor_options:
+  chunk_output_type: console
+---
+
+This notebook contains the simulations
+informing the content of output paper.
+In addition to the simulations
+it contains notes on the coding and interpretation of the simulations.
+
+Data an figures to be used in the output paper
+must be saved to the `output` directory.
+
+## Whatevs
+
+```{r}
+1 + 1
+```
+
