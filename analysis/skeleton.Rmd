@@ -1,6 +1,6 @@
 ---
 title: "Skeleton of paper"
-author: "Ross Gayler"
+author: Charles T. Gray, Ross W. Gayler, Stefan Reimann
 date: "2020-06-10"
 output: workflowr::wflow_html
 editor_options:
@@ -8,7 +8,56 @@ editor_options:
 ---
 
 This is the skeleton of the output paper.
+It also contains some meta-level notes.
 
-## Introduction
+---
 
+# Introduction
+
+* Something like the introduction of [Schlegel et al 2020](https://arxiv.org/abs/2001.11797)
+
+* Note the focus on implementation (biological or artificial).
+This may influence some of the mathematical choices made later.
+Emphasise that the maths is a *model* of implementable systems rather than free-standing maths.
+  * RG vaguely remembers recently seeing a mention of graph-structured computation
+  (i.e. data flow graphs rather than graphs as the subject of computation)
+  as a known area of study.
+  Check whether this area is of any use to us (CG?).
+  * This point about focus on implementation 
+  is most likely relevant in that parenthesization of math expressions to represent associativity
+  translates into alternate wiring of the implementation data flow graph.
+  
+* A data flow graph is probably actually an oriented *hypergraph*,
+where hyperedges correspond to operators/functions with distinguished arguments and output,
+and vertices correspond to HD vector values (thought of as 'registers' if you like).
+  * Side question to CG: Vector space maths seems to be written as though there's only one vector space.
+  In an implementation there are (arguably) as many vector spaces as there are vertices in the data flow hypergraph.
+  Is this a relevant distinction and worth pointing out?
+    * For example, we generally assume that each of the vertices has the same dimensionality,
+    but that's not essential, and in the biological setting it's unlikely.
+    * Along the same lines, permutation operators feel completely different in a biological setting:
+    The input and output vertices are generally not identical dimensionality;
+    The neurons aren't nicely indexed, that's externally applied labelling; 
+    Given that arbitrariness, every connection between two registers is a permutation.
+    * Also, in mathematical and artificial systems we can easily have permutations and their inverses,
+    whereas in biological systems inverse permutations are implausible.
+
+# Content
+
+
+
+
+# References
+
+* The papers currently in the Zotero group library are probable references.
+  * I may add some more structure to the group library if needed.
+  * I will sort out some process to export the used references to the project directory.
+
+* Include software attributions, especially {workflowr}
+
+  > Workflowr is available under the MIT license. For proper attribution, please cite our manuscript that describes the software:
+  >
+  > Blischak JD, Carbonetto P, and Stephens M. Creating and sharing reproducible research code the workflowr way [version 1; peer review: 3 approved]. F1000Research 2019, 8:1749 (https://doi.org/10.12688/f1000research.20843.1)
+  >
+  > To obtain a BibTeX entry, please run citation("workflowr"). Note that F1000Research publishes not only the original version but also any revisions. To check for the latest version, please go to the paper's URL.
 

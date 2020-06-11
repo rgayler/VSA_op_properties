@@ -1,6 +1,6 @@
 ---
 title: "Simulations"
-author: "Ross Gayler"
+author: Charles T. Gray, Ross W. Gayler, Stefan Reimann
 date: "2020-06-10"
 output: workflowr::wflow_html
 editor_options:
@@ -12,7 +12,7 @@ informing the content of output paper.
 In addition to the simulations
 it contains notes on the coding and interpretation of the simulations.
 
-Data an figures to be used in the output paper
+Data and figures to be used in the output paper
 must be saved to the `output` directory.
 
 ## Whatevs
