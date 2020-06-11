@@ -9,7 +9,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
-<meta name="author" content="Ross Gayler" />
+<meta name="author" content="Charles T. Gray, Ross W. Gayler, Stefan Reimann" />
 
 <meta name="date" content="2020-06-10" />
 
@@ -387,7 +387,7 @@ div.tocify {
 
 
 <h1 class="title toc-ignore">Skeleton of paper</h1>
-<h4 class="author">Ross Gayler</h4>
+<h4 class="author">Charles T. Gray, Ross W. Gayler, Stefan Reimann</h4>
 <h4 class="date">2020-06-10</h4>
 
 </div>
@@ -444,16 +444,16 @@ This reproducible <a href="http://rmarkdown.rstudio.com">R Markdown</a> analysis
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomrgaylerVSAoppropertiestree297184d0b64e5777b3ea8c8a8fe8ff52f8ac4c19targetblank297184da"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/rgayler/VSA_op_properties/tree/297184d0b64e5777b3ea8c8a8fe8ff52f8ac4c19" target="_blank">297184d</a> </a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomrgaylerVSAoppropertiestreec048ecfaafe95312b62d739d99a9676847e5c699targetblankc048ecfa"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/rgayler/VSA_op_properties/tree/c048ecfaafe95312b62d739d99a9676847e5c699" target="_blank">c048ecf</a> </a>
 </p>
 </div>
-<div id="strongRepositoryversionstrongahrefhttpsgithubcomrgaylerVSAoppropertiestree297184d0b64e5777b3ea8c8a8fe8ff52f8ac4c19targetblank297184da" class="panel-collapse collapse">
+<div id="strongRepositoryversionstrongahrefhttpsgithubcomrgaylerVSAoppropertiestreec048ecfaafe95312b62d739d99a9676847e5c699targetblankc048ecfa" class="panel-collapse collapse">
 <div class="panel-body">
 <p>
 Great! You are using Git for version control. Tracking code development and connecting the code version to the results is critical for reproducibility.
 </p>
 <p>
-The results in this page were generated with repository version <a href="https://github.com/rgayler/VSA_op_properties/tree/297184d0b64e5777b3ea8c8a8fe8ff52f8ac4c19" target="_blank">297184d</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
+The results in this page were generated with repository version <a href="https://github.com/rgayler/VSA_op_properties/tree/c048ecfaafe95312b62d739d99a9676847e5c699" target="_blank">c048ecf</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
 </p>
 <p>
 Note that you need to be careful to ensure that all relevant files for the analysis have been committed to Git prior to generating the results (you can use <code>wflow_publish</code> or <code>wflow_git_commit</code>). workflowr only checks the R Markdown file, but you know if there are other scripts or data files that it depends on. Below is the status of the Git repository when the results were generated:
@@ -462,6 +462,12 @@ Note that you need to be careful to ensure that all relevant files for the analy
 Ignored files:
     Ignored:    .Rhistory
     Ignored:    .Rproj.user/
+
+Untracked files:
+    Untracked:  README.html
+
+Unstaged changes:
+    Modified:   README.md
 
 </code></pre>
 <p>
@@ -500,6 +506,40 @@ Message
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>
+Rmd
+</td>
+<td>
+<a href="https://github.com/rgayler/VSA_op_properties/blob/c048ecfaafe95312b62d739d99a9676847e5c699/analysis/skeleton.Rmd" target="_blank">c048ecf</a>
+</td>
+<td>
+Ross Gayler
+</td>
+<td>
+2020-06-11
+</td>
+<td>
+wflow_publish("analysis/*.Rmd")
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/rgayler/VSA_op_properties/76332c80e4ef86df2043fea46894c40698714478/docs/skeleton.html" target="_blank">76332c8</a>
+</td>
+<td>
+Ross Gayler
+</td>
+<td>
+2020-06-11
+</td>
+<td>
+Build site.
+</td>
+</tr>
 <tr>
 <td>
 html
@@ -541,9 +581,46 @@ Initial project structure
 </div>
 </div>
 </div>
-<p>This is the skeleton of the output paper.</p>
-<div id="introduction" class="section level2">
-<h2>Introduction</h2>
+<p>This is the skeleton of the output paper. It also contains some meta-level notes.</p>
+<hr />
+<div id="introduction" class="section level1">
+<h1>Introduction</h1>
+<ul>
+<li><p>Something like the introduction of <a href="https://arxiv.org/abs/2001.11797">Schlegel et al 2020</a></p></li>
+<li><p>Note the focus on implementation (biological or artificial). This may influence some of the mathematical choices made later. Emphasise that the maths is a <em>model</em> of implementable systems rather than free-standing maths.</p>
+<ul>
+<li>RG vaguely remembers recently seeing a mention of graph-structured computation (i.e. data flow graphs rather than graphs as the subject of computation) as a known area of study. Check whether this area is of any use to us (CG?).</li>
+<li>This point about focus on implementation is most likely relevant in that parenthesization of math expressions to represent associativity translates into alternate wiring of the implementation data flow graph.</li>
+</ul></li>
+<li><p>A data flow graph is probably actually an oriented <em>hypergraph</em>, where hyperedges correspond to operators/functions with distinguished arguments and output, and vertices correspond to HD vector values (thought of as ‘registers’ if you like).</p>
+<ul>
+<li>Side question to CG: Vector space maths seems to be written as though there’s only one vector space. In an implementation there are (arguably) as many vector spaces as there are vertices in the data flow hypergraph. Is this a relevant distinction and worth pointing out?
+<ul>
+<li>For example, we generally assume that each of the vertices has the same dimensionality, but that’s not essential, and in the biological setting it’s unlikely.</li>
+<li>Along the same lines, permutation operators feel completely different in a biological setting: The input and output vertices are generally not identical dimensionality; The neurons aren’t nicely indexed, that’s externally applied labelling; Given that arbitrariness, every connection between two registers is a permutation.</li>
+<li>Also, in mathematical and artificial systems we can easily have permutations and their inverses, whereas in biological systems inverse permutations are implausible.</li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
+<div id="content" class="section level1">
+<h1>Content</h1>
+</div>
+<div id="references" class="section level1">
+<h1>References</h1>
+<ul>
+<li><p>The papers currently in the Zotero group library are probable references.</p>
+<ul>
+<li>I may add some more structure to the group library if needed.</li>
+<li>I will sort out some process to export the used references to the project directory.</li>
+</ul></li>
+<li><p>Include software attributions, especially {workflowr}</p>
+<blockquote>
+<p>Workflowr is available under the MIT license. For proper attribution, please cite our manuscript that describes the software:</p>
+<p>Blischak JD, Carbonetto P, and Stephens M. Creating and sharing reproducible research code the workflowr way [version 1; peer review: 3 approved]. F1000Research 2019, 8:1749 (<a href="https://doi.org/10.12688/f1000research.20843.1" class="uri">https://doi.org/10.12688/f1000research.20843.1</a>)</p>
+<p>To obtain a BibTeX entry, please run citation(“workflowr”). Note that F1000Research publishes not only the original version but also any revisions. To check for the latest version, please go to the paper’s URL.</p>
+</blockquote></li>
+</ul>
 </div>
 
 
