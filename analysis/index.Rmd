@@ -10,6 +10,10 @@ editor_options:
 
 This is the research website for the project "VSA operator properties".
 
+The online copy of this site is at https://rgayler.github.io/VSA_op_properties/
+
+---
+
 * [Simulation notebook](simulation.html)
 
 This notebook contains the code for simulations informing the paper.
@@ -28,7 +32,8 @@ or it may be retained as separate document
 
 * [Output paper](../paper/paper.pdf)
 
-*I haven't sorted out this link yet.*
+*Currently, this link doesn't work.
+I need to work out how to make the output paper available locally and on the GitHub Pages website.*
 
 The final form of the output document
 that will be uploaded to an appropriate archive
