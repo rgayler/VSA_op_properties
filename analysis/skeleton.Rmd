@@ -44,6 +44,45 @@ and vertices correspond to HD vector values (thought of as 'registers' if you li
 
 # Content
 
+## Basic set of VSA operators
+
+* At this point, ignore the more unusual operators like CDT binding.
+
+* Sum-like, product-like, permutation
+  * Commonly thought of as binding, bundling, protect because that's how they are typically used in systems
+  but best not to think of them that way.
+  The operators have mathematical properties
+  and the job of the system designer is to design the system to extract useful work from those properties.
+
+* The operators are binary, binary, unary (respectively) on a vector space.
+  * For initial explanation, think of a high-dimensional (say, 10k) real vector space
+  
+* Sum-like operator is *element-wise* 'sum' of vectors
+
+* Permutation operator is a fixed re-ordering of elements in a vector.
+  * In a fixed finite data flow hypergraph (i.e. a physical realisation)
+  there would be a fixed, finite number of permutations.
+  * In an artificial system the same permutation could appear at multiple locations in the data flow hypergraph,
+  and having one permutation be the inverse of another is no problem.
+  * In a biological system each permutation would most likely be unique,
+  and getting an inverse to some other permutation is unlikely.
+  
+* Product-like operator is a bit more complex
+* Start with Smolensky 1990 - Tensor product variable binding 
+  * Showed that it is possible to represent composite discrete data structures in a vector space
+  and manipulate those structures with vector space transformations.
+  * Product-like operator is tensor product (= outer product)
+    * Very inconvenient for implementation because dimensionality increases exponentially with the number vectors combined
+  * Mention Fock algebras?
+* VSA can be interpreted as a lossy compression of the outer product (Plate 1994 - Thesis?)
+  * Calculate tensor product and project onto a lower dimensional space (same dimensionality as the arguments)
+  * Plate's HRR uses circular convolution as the product operator
+    * Circular convolution is defined as a very orderly set of sums over the elements of the outer product
+      * Include Plate's standard diagram of circular convolution
+  * Plate pointed out that sums of random subsets of the elements of the outer product would also work
+  * Relate to Johnson-Lindenstrauss theorem?
+  This would make more sense after covering the centrality of vector similarity
+
 
 
 
