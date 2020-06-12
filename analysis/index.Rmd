@@ -40,3 +40,8 @@ including possible future extensions.
 This is the final form of the output document
 that will be uploaded to an appropriate archive
 and submitted to a publication venue.
+
+* [Cookbook](cookbook.html)
+
+This document contains useful definitions of HD properties.
+
