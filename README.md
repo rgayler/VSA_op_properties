@@ -33,7 +33,17 @@ and all the materials and outputs are openly accessible.
 
 *Instructions yet to be written.*
 
-*Yet to be decided whether to binderise the repo.*
+All detailed instructions should probably go here,
+with the directory-specific README.md files only giving the purpose of each directory.
+
+**NOTE: {workflowr} only manages a subset of the files,
+so that you will need to manually stage and commit the other files
+that need to be mirrored on GitHub.**
+
+## Output paper
+
+The output paper is not managed by {workflowr},
+so needs some separate handling.
 
 * Files for creation of the output paper are in the `paper` directory.
   * This directory was created by the {[rticles](https://CRAN.R-project.org/package=rticles)} package,
@@ -41,8 +51,28 @@ and all the materials and outputs are openly accessible.
   (This will change if we find a different publication venue for the paper.)
   * The paper uses data objects and figures created by the simulation notebook
   and stored in the `output` directory.
-  * I manually created a symlink rom `docs/paper.pdf` to `paper/paper.pdf`
-  so that the website (locally and on GitHub pages)
-  an refer to the paper.
+
+The output paper (`paper.pdf`) is created in the `paper` directory,
+but needs to also exist in the `docs` directory
+so that it can be referenced from the web pages (locally and on GitHub).
+
+* After creating `paper.pdf` for the first time,
+move the file form 'paper' to `docs`,
+open a terminal, change directory to `paper`,
+and manually create a symlink to the file (`ln -s ../docs/paper.pdf paper.pdf`).
+
+The file needs to be in `docs` so that GitHub picks it up for rendering the GitHub pages.
+When the paper is regenerated, it is written to the symlink in `paper`,
+which updates the file in `docs`.
+
+I am not convinced that managing the output paper via GitHub is the best method for remote collaboration
+because of the need to merge the individual contributions.
+On the other hand, using something like Overleaf for editing the source text
+would not allow executable code in the text
+and would have the problem of synchronising output objects in the Overleaf environment.
   
-* Bibliography records are manually exported from Zotero and stored in the `???` directory
+* Bibliography records are manually exported from Zotero and stored in the `paper` directory.
+
+## Binder
+
+*Yet to be decided whether to binderise the repo.*
