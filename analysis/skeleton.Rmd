@@ -12,6 +12,13 @@ It also contains some meta-level notes.
 
 ---
 
+RG expects that this will be quite a long paper
+because of the amount of relevant background to be covered
+(the empirical component will be relatively straightforward).
+It **won't** be suitable for a classic computer science 6-page conference paper.
+FWIW, [PeerJ Computer Science](https://peerj.com/computer-science/)
+doesn't appear to have a page limit.
+
 CG - For everything that is done empirically
 it would be helpful to have mathematical argument showing what is expected.
 To the extent that is possible you could, in principle,

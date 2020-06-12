@@ -2,17 +2,23 @@
 title: Template for preparing your research report submission to PeerJ using RMarkdown
 preprint: false
 author: 
-  - name: Barbara McClintock
+  - name: Charles T.Gray
     affiliation: 1
-    corresponding: true
-    email: mcclintockb@cshl.edu
-  - name: Charles E. Darwin
+    email: charles@somewhere.dom
+  - name: Ross W. Gayler
     affiliation: 2
+    corresponding: true
+    email: ross@rossgayler.com
+  - name: Stefan Reimann
+    affiliation: 3
+    email: stefan@somewhere-else.dom
 affiliation:
   - code: 1
-    address: Cold Spring Harbor Laboratory, One Bungtown Road Cold Spring Harbor, NY 11724
+    address: Charles' institution address, Australia
   - code: 2
-    address: Down House, Luxted Rd, Downe, Orpington BR6 7JT, UK
+    address: www.rossgayler.com
+  - code: 3
+    address: Stefan's institution address, Switzerland
 abstract: >
   The abstract of the article.
   It can also be on *multiple* lines.

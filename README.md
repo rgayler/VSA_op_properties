@@ -27,6 +27,7 @@ We are using the {[workflowr](https://github.com/jdblischak/workflowr)} package
 to structure the project so that the work is computationally reproducible
 and all the materials and outputs are openly accessible.
 
+**Refer to John Blischak's https://github.com/jdblischak/singleCellSeq for ideas on project organisation.**
 
 # Installation
 
@@ -40,6 +41,8 @@ and all the materials and outputs are openly accessible.
   (This will change if we find a different publication venue for the paper.)
   * The paper uses data objects and figures created by the simulation notebook
   and stored in the `output` directory.
+  * I manually created a symlink rom `docs/paper.pdf` to `paper/paper.pdf`
+  so that the website (locally and on GitHub pages)
+  an refer to the paper.
   
 * Bibliography records are manually exported from Zotero and stored in the `???` directory
-
