@@ -9,9 +9,11 @@
 <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
+<meta name="author" content="Ross Gayler" />
 
+<meta name="date" content="2020-06-12" />
 
-<title>Home</title>
+<title>cookbook</title>
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -19,6 +21,9 @@
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
@@ -258,6 +263,69 @@ $(document).ready(function () {
 
 
 
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+
 
 </head>
 
@@ -265,6 +333,16 @@ $(document).ready(function () {
 
 
 <div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row-fluid">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
 
 
 
@@ -308,7 +386,9 @@ $(document).ready(function () {
 
 
 
-<h1 class="title toc-ignore">Home</h1>
+<h1 class="title toc-ignore">cookbook</h1>
+<h4 class="author">Ross Gayler</h4>
+<h4 class="date">2020-06-12</h4>
 
 </div>
 
@@ -399,7 +479,7 @@ Note that any generated files, e.g. HTML, png, CSS, etc., are not included in t
 <div id="versions" class="tab-pane fade">
 
 <p>
-These are the previous versions of the repository in which changes were made to the R Markdown (<code>analysis/index.Rmd</code>) and HTML (<code>docs/index.html</code>) files. If you’ve configured a remote Git repository (see <code>?wflow_git_remote</code>), click on the hyperlinks in the table below to view the files as they were in that past version.
+These are the previous versions of the repository in which changes were made to the R Markdown (<code>analysis/cookbook.Rmd</code>) and HTML (<code>docs/cookbook.html</code>) files. If you’ve configured a remote Git repository (see <code>?wflow_git_remote</code>), click on the hyperlinks in the table below to view the files as they were in that past version.
 </p>
 <div class="table-responsive">
 <table class="table table-condensed table-hover">
@@ -428,7 +508,7 @@ Message
 Rmd
 </td>
 <td>
-<a href="https://github.com/rgayler/VSA_op_properties/blob/9aafd857ba179177e5bbd389228afc33a61189c0/analysis/index.Rmd" target="_blank">9aafd85</a>
+<a href="https://github.com/rgayler/VSA_op_properties/blob/9aafd857ba179177e5bbd389228afc33a61189c0/analysis/cookbook.Rmd" target="_blank">9aafd85</a>
 </td>
 <td>
 Ross Gayler
@@ -438,227 +518,6 @@ Ross Gayler
 </td>
 <td>
 wflow_publish("analysis/*.Rmd")
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/rgayler/VSA_op_properties/683007c78ef1579b0c89053dd3d6ea0f4883c44b/docs/index.html" target="_blank">683007c</a>
-</td>
-<td>
-Ross Gayler
-</td>
-<td>
-2020-06-12
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/rgayler/VSA_op_properties/fb5a73add0af35a4fdd41fcf25d3ce7173aff8a7/docs/index.html" target="_blank">fb5a73a</a>
-</td>
-<td>
-Ross Gayler
-</td>
-<td>
-2020-06-12
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/rgayler/VSA_op_properties/0c18b53c0afb974b0324c858a092b5c18e8c3eba/docs/index.html" target="_blank">0c18b53</a>
-</td>
-<td>
-Ross Gayler
-</td>
-<td>
-2020-06-12
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/rgayler/VSA_op_properties/13e72649cdb56ff827f5eba4cc753b6f95988495/docs/index.html" target="_blank">13e7264</a>
-</td>
-<td>
-Ross Gayler
-</td>
-<td>
-2020-06-12
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-Rmd
-</td>
-<td>
-<a href="https://github.com/rgayler/VSA_op_properties/blob/528aea79ff631f89d2cdb23b3dbba1defb86d515/analysis/index.Rmd" target="_blank">528aea7</a>
-</td>
-<td>
-Ross Gayler
-</td>
-<td>
-2020-06-12
-</td>
-<td>
-wflow_publish("analysis/*.Rmd")
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/rgayler/VSA_op_properties/d7768d676158f8a8ac0a23863dc5935d47af1474/docs/index.html" target="_blank">d7768d6</a>
-</td>
-<td>
-Ross Gayler
-</td>
-<td>
-2020-06-11
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/rgayler/VSA_op_properties/31bf3e791b8230ad7e28897dc71c25ab0d23fd9e/docs/index.html" target="_blank">31bf3e7</a>
-</td>
-<td>
-Ross Gayler
-</td>
-<td>
-2020-06-11
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/rgayler/VSA_op_properties/6e41979d71ec38ddd4da67ae0223b8dcade38527/docs/index.html" target="_blank">6e41979</a>
-</td>
-<td>
-Ross Gayler
-</td>
-<td>
-2020-06-11
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/rgayler/VSA_op_properties/76332c80e4ef86df2043fea46894c40698714478/docs/index.html" target="_blank">76332c8</a>
-</td>
-<td>
-Ross Gayler
-</td>
-<td>
-2020-06-11
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-Rmd
-</td>
-<td>
-<a href="https://github.com/rgayler/VSA_op_properties/blob/297184d0b64e5777b3ea8c8a8fe8ff52f8ac4c19/analysis/index.Rmd" target="_blank">297184d</a>
-</td>
-<td>
-Ross Gayler
-</td>
-<td>
-2020-06-11
-</td>
-<td>
-wflow_publish("analysis/*.Rmd")
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/rgayler/VSA_op_properties/0264b195d0236ec68484e2795c085ab706f43770/docs/index.html" target="_blank">0264b19</a>
-</td>
-<td>
-Ross Gayler
-</td>
-<td>
-2020-06-10
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-Rmd
-</td>
-<td>
-<a href="https://github.com/rgayler/VSA_op_properties/blob/7797bffb88f309b0b1c3d70cfde8afdfa1614010/analysis/index.Rmd" target="_blank">7797bff</a>
-</td>
-<td>
-Ross Gayler
-</td>
-<td>
-2020-06-10
-</td>
-<td>
-Initial project structure
-</td>
-</tr>
-<tr>
-<td>
-Rmd
-</td>
-<td>
-<a href="https://github.com/rgayler/VSA_op_properties/blob/64e651ece0df0b4174095d0153e8771c4cc570fd/analysis/index.Rmd" target="_blank">64e651e</a>
-</td>
-<td>
-Ross Gayler
-</td>
-<td>
-2020-06-10
-</td>
-<td>
-Start workflowr project.
 </td>
 </tr>
 </tbody>
@@ -668,27 +527,11 @@ Start workflowr project.
 </div>
 </div>
 </div>
-<p>This is the research website for the project “VSA operator properties”.</p>
-<p>The online copy of this site is at <a href="https://rgayler.github.io/VSA_op_properties/" class="uri">https://rgayler.github.io/VSA_op_properties/</a></p>
-<hr />
-<ul>
-<li><a href="simulation.html">Simulation notebook</a></li>
-</ul>
-<p>This notebook contains the simulations informing the output paper. In addition to the code, it also contains notes on the design and implementation of the simulations and notes on the interpretation of the results. It is effectively a laboratory notebook, capturing the process by which we arrived at our conclusions.</p>
-<p>The output paper is a separate document because the presentation of the conclusions doesn’t necessary follow the same path we followed to arrive at the conclusions and because publication venues have idiosyncratic formatting requirements.</p>
-<ul>
-<li><a href="skeleton.html">Skeleton paper</a></li>
-</ul>
-<p>This document sketches out the contents and organisation of the final output paper. It also contains meta-level discussion of the paper, including possible future extensions.</p>
-<ul>
-<li><a href="paper.pdf">Output paper</a></li>
-</ul>
-<p><em>This is currently a dummy paper.</em></p>
-<p>This is the final form of the output document that will be uploaded to an appropriate archive and submitted to a publication venue.</p>
-<ul>
-<li><a href="cookbook.html">Cookbook</a></li>
-</ul>
-<p>This document contains useful definitions of HD properties.</p>
+<p>Document to hold useful edfinitions of HD properties.</p>
+<div id="distribution-of-distances" class="section level1">
+<h1>Distribution of distances</h1>
+<p>blah</p>
+</div>
 
 
 <!-- Adjust MathJax settings so that all math formulae are shown using
@@ -704,6 +547,8 @@ footer is added to webpages before the MathJax javascript. -->
 </script>
 
 
+</div>
+</div>
 
 </div>
 
@@ -736,6 +581,32 @@ $(document).ready(function () {
 
 <!-- code folding -->
 
+<script>
+$(document).ready(function ()  {
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>

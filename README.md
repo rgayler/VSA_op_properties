@@ -29,6 +29,8 @@ and all the materials and outputs are openly accessible.
 
 **Refer to John Blischak's https://github.com/jdblischak/singleCellSeq for ideas on project organisation.**
 
+**On completion write up the relevant bits of the project structure for John Blischak at `{workflowr}`.**
+
 # Installation
 
 *Instructions yet to be written.*
@@ -76,3 +78,4 @@ and would have the problem of synchronising output objects in the Overleaf envir
 ## Binder
 
 *Yet to be decided whether to binderise the repo.*
+
