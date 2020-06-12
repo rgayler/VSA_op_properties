@@ -30,5 +30,3 @@ This project is the joint work of (alphabetically):
 
 We are using the {[workflowr](https://github.com/jdblischak/workflowr)} package to structure project so that the work is computationally reproducible
 and all the materials and outputs are openly accessible.
-
-

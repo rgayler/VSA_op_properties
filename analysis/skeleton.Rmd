@@ -12,6 +12,13 @@ It also contains some meta-level notes.
 
 ---
 
+CG - For everything that is done empirically
+it would be helpful to have mathematical argument showing what is expected.
+To the extent that is possible you could, in principle,
+run with the maths and drop the empirical component -
+but I like empirical demonstration
+to give some confidence that the maths isn't flawed.
+
 # Introduction
 
 * Something like the introduction of [Schlegel et al 2020](https://arxiv.org/abs/2001.11797)
@@ -83,8 +90,72 @@ and vertices correspond to HD vector values (thought of as 'registers' if you li
   * Relate to Johnson-Lindenstrauss theorem?
   This would make more sense after covering the centrality of vector similarity
 
+## Vector space
 
+* Different bases (terminology)
+* Dimensionality compensates for resolution
+* Arguable to run with binary resolution as our guinea-pig?
+  * Plate 1994 had some points about resolution
+  * ... also pointed out that BSC is equivalent to Frequency domain HRR with phase uantised to binary levels
 
+* Interpretation of vectors as analog representation of discrete structure
+  * Direction encodes sequence of operators and arguments applied
+  * Magnitude encodes 'support' for the representation
+
+## Similarity
+
+* Similarity measure is core (math argument for that?)
+* Argument for angular measure if similarity (distance doesn't work in HD)
+* Similarity measure as sum over elements
+
+* Need for graded similarity?
+
+* Raise centring of similarity measure as an issue.
+  * Probably do empirical work using both centred and non-centred similarity.
+  
+## Definition of operators in terms of similarity effects
+
+* Sum-like: 
+  * sum similar to both arguments
+
+* Product-like: 
+  * product dissimilar to both arguments
+  * product preserves similarity structure between vectors
+
+* Permutation: 
+  * permutation dissimilar to argument
+  * permutation preserves similarity structure between vectors
+  
+* Needs some thought on the relationship between product and permutation
+* Category theorists have views on the essence of sum-like and product-like operators? (CG?)
+
+## Properties of full-outer-product compressions
+
+## Properties of diagonal-outer-product compressions
+
+* Diagonal outer-product compressions are element-wise
+  * Do all algebraic properties follow from considering only one element? (CG?)
+  
+### Probabilistic parameterisation of single-element binary opertor
+
+* Focus on implementation means operator definition must be 'local'
+(i.e. output must depend only on the inputs and locally available information)
+  * 2 inputs, 2 constants (the binary levels), dynamically realised random values (for probabilistic selection)
+  * Implement operator table as probabilistic selection from:
+      * inputs
+      * constants
+  * Express binary levels as {A, not_A} rather than {0, 1} or {-1, +1}
+  to avoid being specific to a particular encoding?
+  
+* Probabilistic selection of constants raises the issue of density and density-preserving operations.
+  * draw the parallel to normalisation in HRR and similar VSAs?
+
+### Map of operator properties
+
+* Commutativity and associativity (CG is that all?)
+* Distributivity requires two operators
+* VSA distributes wrt product and permutation
+* Distributivity is important implementation property because it gives parallelism for free
 
 # References
 
