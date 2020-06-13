@@ -38,6 +38,8 @@ and all the materials and outputs are openly accessible.
 All detailed instructions should probably go here,
 with the directory-specific README.md files only giving the purpose of each directory.
 
+Bibliography and reference style sheet go in `analysis/`
+
 **NOTE: {workflowr} only manages a subset of the files,
 so that you will need to manually stage and commit the other files
 that need to be mirrored on GitHub.**

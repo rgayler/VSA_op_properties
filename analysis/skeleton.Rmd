@@ -3,6 +3,8 @@ title: "Skeleton of paper"
 author: Charles T. Gray, Ross W. Gayler, Stefan Reimann
 date: "2020-06-10"
 output: workflowr::wflow_html
+bibliography: VSA_operators.bibtex
+csl: apa-single-spaced.csl
 editor_options:
   chunk_output_type: console
 ---
@@ -28,7 +30,7 @@ to give some confidence that the maths isn't flawed.
 
 # Introduction
 
-* Something like the introduction of [Schlegel et al 2020](https://arxiv.org/abs/2001.11797)
+* Something like the introduction of @schlegelComparisonVectorSymbolic2020
 
 * Note the focus on implementation (biological or artificial).
 This may influence some of the mathematical choices made later.
@@ -40,8 +42,9 @@ Emphasise that the maths is a *model* of implementable systems rather than free-
   * This point about focus on implementation 
   is most likely relevant in that parenthesization of math expressions to represent associativity
   translates into alternate wiring of the implementation data flow graph.
+  Give example here with diagrams.
   
-* A data flow graph is probably actually an oriented *hypergraph*,
+* A data flow graph is actually an oriented *hypergraph*,
 where hyperedges correspond to operators/functions with distinguished arguments and output,
 and vertices correspond to HD vector values (thought of as 'registers' if you like).
   * Side question to CG: Vector space maths seems to be written as though there's only one vector space.
@@ -87,7 +90,7 @@ and vertices correspond to HD vector values (thought of as 'registers' if you li
   and manipulate those structures with vector space transformations.
   * Product-like operator is tensor product (= outer product)
     * Very inconvenient for implementation because dimensionality increases exponentially with the number vectors combined
-  * Mention Fock algebras?
+  * Mention Fock algebras? (e.g. @beimgrabenVectorSymbolicArchitectures2020, although I think there's a much earlier mention by Smolensky)
 * VSA can be interpreted as a lossy compression of the outer product (Plate 1994 - Thesis?)
   * Calculate tensor product and project onto a lower dimensional space (same dimensionality as the arguments)
   * Plate's HRR uses circular convolution as the product operator
@@ -100,10 +103,11 @@ and vertices correspond to HD vector values (thought of as 'registers' if you li
 ## Vector space
 
 * Different bases (terminology)
-* Dimensionality compensates for resolution
+  * complex, real, {0,1}, {-1,+1}, whatever the hell geometric algebras are
+* Dimensionality compensates for resolution (Plate?)
 * Arguable to run with binary resolution as our guinea-pig?
   * Plate 1994 had some points about resolution
-  * ... also pointed out that BSC is equivalent to Frequency domain HRR with phase uantised to binary levels
+  * ... also pointed out that BSC is equivalent to Frequency domain HRR with phase quantised to binary levels
 
 * Interpretation of vectors as analog representation of discrete structure
   * Direction encodes sequence of operators and arguments applied
@@ -177,4 +181,6 @@ and vertices correspond to HD vector values (thought of as 'registers' if you li
   > Blischak JD, Carbonetto P, and Stephens M. Creating and sharing reproducible research code the workflowr way [version 1; peer review: 3 approved]. F1000Research 2019, 8:1749 (https://doi.org/10.12688/f1000research.20843.1)
   >
   > To obtain a BibTeX entry, please run citation("workflowr"). Note that F1000Research publishes not only the original version but also any revisions. To check for the latest version, please go to the paper's URL.
+
+---
 
