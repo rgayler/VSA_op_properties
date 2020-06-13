@@ -413,7 +413,7 @@ div.tocify {
 <div class="tab-content">
 <div id="summary" class="tab-pane fade in active">
 <p>
-<strong>Last updated:</strong> 2020-06-12
+<strong>Last updated:</strong> 2020-06-13
 </p>
 <p>
 <strong>Checks:</strong> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 2 <span class="glyphicon glyphicon-exclamation-sign text-danger" aria-hidden="true"></span> 0
@@ -444,16 +444,16 @@ This reproducible <a href="http://rmarkdown.rstudio.com">R Markdown</a> analysis
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomrgaylerVSAoppropertiestree9aafd857ba179177e5bbd389228afc33a61189c0targetblank9aafd85a"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/rgayler/VSA_op_properties/tree/9aafd857ba179177e5bbd389228afc33a61189c0" target="_blank">9aafd85</a> </a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomrgaylerVSAoppropertiestreee94dad3ecaaea8aeb4bd59e8ecc78b27d8c4a9dftargetblanke94dad3a"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/rgayler/VSA_op_properties/tree/e94dad3ecaaea8aeb4bd59e8ecc78b27d8c4a9df" target="_blank">e94dad3</a> </a>
 </p>
 </div>
-<div id="strongRepositoryversionstrongahrefhttpsgithubcomrgaylerVSAoppropertiestree9aafd857ba179177e5bbd389228afc33a61189c0targetblank9aafd85a" class="panel-collapse collapse">
+<div id="strongRepositoryversionstrongahrefhttpsgithubcomrgaylerVSAoppropertiestreee94dad3ecaaea8aeb4bd59e8ecc78b27d8c4a9dftargetblanke94dad3a" class="panel-collapse collapse">
 <div class="panel-body">
 <p>
 Great! You are using Git for version control. Tracking code development and connecting the code version to the results is critical for reproducibility.
 </p>
 <p>
-The results in this page were generated with repository version <a href="https://github.com/rgayler/VSA_op_properties/tree/9aafd857ba179177e5bbd389228afc33a61189c0" target="_blank">9aafd85</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
+The results in this page were generated with repository version <a href="https://github.com/rgayler/VSA_op_properties/tree/e94dad3ecaaea8aeb4bd59e8ecc78b27d8c4a9df" target="_blank">e94dad3</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
 </p>
 <p>
 Note that you need to be careful to ensure that all relevant files for the analysis have been committed to Git prior to generating the results (you can use <code>wflow_publish</code> or <code>wflow_git_commit</code>). workflowr only checks the R Markdown file, but you know if there are other scripts or data files that it depends on. Below is the status of the Git repository when the results were generated:
@@ -462,9 +462,7 @@ Note that you need to be careful to ensure that all relevant files for the analy
 Ignored files:
     Ignored:    .Rhistory
     Ignored:    .Rproj.user/
-
-Unstaged changes:
-    Modified:   README.md
+    Ignored:    .tresorit/
 
 </code></pre>
 <p>
@@ -503,6 +501,40 @@ Message
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>
+Rmd
+</td>
+<td>
+<a href="https://github.com/rgayler/VSA_op_properties/blob/e94dad3ecaaea8aeb4bd59e8ecc78b27d8c4a9df/analysis/skeleton.Rmd" target="_blank">e94dad3</a>
+</td>
+<td>
+Ross Gayler
+</td>
+<td>
+2020-06-13
+</td>
+<td>
+wflow_publish("analysis/*.Rmd")
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/rgayler/VSA_op_properties/f210f7055ea2ec3af65b302c9c87dab2afa9a957/docs/skeleton.html" target="_blank">f210f70</a>
+</td>
+<td>
+Ross Gayler
+</td>
+<td>
+2020-06-12
+</td>
+<td>
+Build site.
+</td>
+</tr>
 <tr>
 <td>
 html
@@ -755,13 +787,13 @@ Initial project structure
 <div id="introduction" class="section level1">
 <h1>Introduction</h1>
 <ul>
-<li><p>Something like the introduction of <a href="https://arxiv.org/abs/2001.11797">Schlegel et al 2020</a></p></li>
+<li><p>Something like the introduction of <span class="citation">Schlegel, Neubert, &amp; Protzel (2020)</span></p></li>
 <li><p>Note the focus on implementation (biological or artificial). This may influence some of the mathematical choices made later. Emphasise that the maths is a <em>model</em> of implementable systems rather than free-standing maths.</p>
 <ul>
 <li>RG vaguely remembers recently seeing a mention of graph-structured computation (i.e. data flow graphs rather than graphs as the subject of computation) as a known area of study. Check whether this area is of any use to us (CG?).</li>
-<li>This point about focus on implementation is most likely relevant in that parenthesization of math expressions to represent associativity translates into alternate wiring of the implementation data flow graph.</li>
+<li>This point about focus on implementation is most likely relevant in that parenthesization of math expressions to represent associativity translates into alternate wiring of the implementation data flow graph. Give example here with diagrams.</li>
 </ul></li>
-<li><p>A data flow graph is probably actually an oriented <em>hypergraph</em>, where hyperedges correspond to operators/functions with distinguished arguments and output, and vertices correspond to HD vector values (thought of as ‘registers’ if you like).</p>
+<li><p>A data flow graph is actually an oriented <em>hypergraph</em>, where hyperedges correspond to operators/functions with distinguished arguments and output, and vertices correspond to HD vector values (thought of as ‘registers’ if you like).</p>
 <ul>
 <li>Side question to CG: Vector space maths seems to be written as though there’s only one vector space. In an implementation there are (arguably) as many vector spaces as there are vertices in the data flow hypergraph. Is this a relevant distinction and worth pointing out?
 <ul>
@@ -801,7 +833,7 @@ Initial project structure
 <ul>
 <li>Very inconvenient for implementation because dimensionality increases exponentially with the number vectors combined</li>
 </ul></li>
-<li>Mention Fock algebras?</li>
+<li>Mention Fock algebras? (e.g. <span class="citation">beim Graben et al. (2020)</span>, although I think there’s a much earlier mention by Smolensky)</li>
 </ul></li>
 <li><p>VSA can be interpreted as a lossy compression of the outer product (Plate 1994 - Thesis?)</p>
 <ul>
@@ -821,12 +853,15 @@ Initial project structure
 <div id="vector-space" class="section level2">
 <h2>Vector space</h2>
 <ul>
-<li>Different bases (terminology)</li>
-<li>Dimensionality compensates for resolution</li>
+<li>Different bases (terminology)
+<ul>
+<li>complex, real, {0,1}, {-1,+1}, whatever the hell geometric algebras are</li>
+</ul></li>
+<li>Dimensionality compensates for resolution (Plate?)</li>
 <li>Arguable to run with binary resolution as our guinea-pig?
 <ul>
 <li>Plate 1994 had some points about resolution</li>
-<li>… also pointed out that BSC is equivalent to Frequency domain HRR with phase uantised to binary levels</li>
+<li>… also pointed out that BSC is equivalent to Frequency domain HRR with phase quantised to binary levels</li>
 </ul></li>
 <li>Interpretation of vectors as analog representation of discrete structure
 <ul>
@@ -925,6 +960,15 @@ Initial project structure
 <p>To obtain a BibTeX entry, please run citation(“workflowr”). Note that F1000Research publishes not only the original version but also any revisions. To check for the latest version, please go to the paper’s URL.</p>
 </blockquote></li>
 </ul>
+<hr />
+<div id="refs" class="references">
+<div id="ref-beimgrabenVectorSymbolicArchitectures2020">
+<p>beim Graben, P., Huber, M., Meyer, W., Römer, R., Tschöpe, C., &amp; Wolff, M. (2020). Vector symbolic architectures for context-free grammars. <em>arXiv:2003.05171 [Cs, Q-Bio]</em>. Retrieved from <a href="http://arxiv.org/abs/2003.05171">http://arxiv.org/abs/2003.05171</a></p>
+</div>
+<div id="ref-schlegelComparisonVectorSymbolic2020">
+<p>Schlegel, K., Neubert, P., &amp; Protzel, P. (2020). A comparison of Vector Symbolic Architectures. <em>arXiv:2001.11797 [Cs]</em>. Retrieved from <a href="http://arxiv.org/abs/2001.11797">http://arxiv.org/abs/2001.11797</a></p>
+</div>
+</div>
 </div>
 
 
