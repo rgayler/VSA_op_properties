@@ -444,16 +444,16 @@ This reproducible <a href="http://rmarkdown.rstudio.com">R Markdown</a> analysis
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomrgaylerVSAoppropertiestree49da2d5afc18d01d309eef255e8757165c2487d9targetblank49da2d5a"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/rgayler/VSA_op_properties/tree/49da2d5afc18d01d309eef255e8757165c2487d9" target="_blank">49da2d5</a> </a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomrgaylerVSAoppropertiestree388a584242269057f880f76a2b45704fbe5d34f2targetblank388a584a"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/rgayler/VSA_op_properties/tree/388a584242269057f880f76a2b45704fbe5d34f2" target="_blank">388a584</a> </a>
 </p>
 </div>
-<div id="strongRepositoryversionstrongahrefhttpsgithubcomrgaylerVSAoppropertiestree49da2d5afc18d01d309eef255e8757165c2487d9targetblank49da2d5a" class="panel-collapse collapse">
+<div id="strongRepositoryversionstrongahrefhttpsgithubcomrgaylerVSAoppropertiestree388a584242269057f880f76a2b45704fbe5d34f2targetblank388a584a" class="panel-collapse collapse">
 <div class="panel-body">
 <p>
 Great! You are using Git for version control. Tracking code development and connecting the code version to the results is critical for reproducibility.
 </p>
 <p>
-The results in this page were generated with repository version <a href="https://github.com/rgayler/VSA_op_properties/tree/49da2d5afc18d01d309eef255e8757165c2487d9" target="_blank">49da2d5</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
+The results in this page were generated with repository version <a href="https://github.com/rgayler/VSA_op_properties/tree/388a584242269057f880f76a2b45704fbe5d34f2" target="_blank">388a584</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
 </p>
 <p>
 Note that you need to be careful to ensure that all relevant files for the analysis have been committed to Git prior to generating the results (you can use <code>wflow_publish</code> or <code>wflow_git_commit</code>). workflowr only checks the R Markdown file, but you know if there are other scripts or data files that it depends on. Below is the status of the Git repository when the results were generated:
@@ -463,10 +463,6 @@ Ignored files:
     Ignored:    .Rhistory
     Ignored:    .Rproj.user/
     Ignored:    .tresorit/
-
-Unstaged changes:
-    Modified:   analysis/VSA_operators.bibtex
-    Modified:   paper/README.md
 
 </code></pre>
 <p>
@@ -505,6 +501,40 @@ Message
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>
+Rmd
+</td>
+<td>
+<a href="https://github.com/rgayler/VSA_op_properties/blob/388a584242269057f880f76a2b45704fbe5d34f2/analysis/skeleton.Rmd" target="_blank">388a584</a>
+</td>
+<td>
+Ross Gayler
+</td>
+<td>
+2020-06-13
+</td>
+<td>
+wflow_publish("analysis/*.Rmd")
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/rgayler/VSA_op_properties/b9540bd7801369adad26366b23b8b23d15d6098b/docs/skeleton.html" target="_blank">b9540bd</a>
+</td>
+<td>
+Ross Gayler
+</td>
+<td>
+2020-06-13
+</td>
+<td>
+Build site.
+</td>
+</tr>
 <tr>
 <td>
 Rmd
@@ -837,6 +867,7 @@ Initial project structure
 </div>
 <p>This is the skeleton of the output paper. It also contains some meta-level notes.</p>
 <p>Notation: <strong>→XX</strong> indicates a question or action aimed at person <em>XX</em>.</p>
+<p>Ideally there would be some way of cross-referencing points in the <code>skeleton</code> document with code chunks and text in the <code>simulation</code> document but this doesn’t seem to be possible when using <code>{workflowr}</code>. I don’t want to merge the two documents into one because I think that would be very unwieldy while trying to reorganise the skeleton.</p>
 <hr />
 <p>RG expects that this will be quite a long paper because of the amount of relevant background to be covered (the empirical component will be relatively straightforward). It <strong>won’t</strong> be suitable for a classic computer science 6-page conference paper. FWIW, <a href="https://peerj.com/computer-science/">PeerJ Computer Science</a> doesn’t appear to have a page limit.</p>
 <p><strong>→SR</strong> A lot of the background information I expect to need here should probably be included in SR’s cookbook. If that is so, would it be better to treat the cookbook as the primary repository for that information and have pointers from this paper? That would make this paper shorter, but no longer self-contained. That would also raise issues about the publication order of this paper and the cookbook, and how to deal with changing content if the cookbook evolves over time.</p>
@@ -941,7 +972,7 @@ Initial project structure
 </ul></li>
 </ul>
 </div>
-<div id="similarity" class="section level2">
+<div id="sim" class="section level2">
 <h2>Similarity</h2>
 <ul>
 <li>Similarity measure is core to VSA
@@ -1006,8 +1037,8 @@ Initial project structure
 <li>Do all algebraic properties follow from considering only one element? (CG?)</li>
 </ul></li>
 </ul>
-<div id="probabilistic-parameterisation-of-single-element-binary-opertor" class="section level3">
-<h3>Probabilistic parameterisation of single-element binary opertor</h3>
+<div id="prob-param" class="section level3">
+<h3>Probabilistic parameterisation of single-element binary operator</h3>
 <ul>
 <li>Focus on implementation means that operator definition must be ‘local’ (i.e. output must depend only on the inputs and locally available information)
 <ul>

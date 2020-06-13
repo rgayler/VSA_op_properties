@@ -27,6 +27,10 @@
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<script src="site_libs/htmlwidgets-1.5.1/htmlwidgets.js"></script>
+<script src="site_libs/viz-1.8.2/viz.js"></script>
+<link href="site_libs/DiagrammeR-styles-0.2/styles.css" rel="stylesheet" />
+<script src="site_libs/grViz-binding-1.0.6.1/grViz.js"></script>
 <link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
 <link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
 
@@ -504,16 +508,16 @@ This reproducible <a href="http://rmarkdown.rstudio.com">R Markdown</a> analysis
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomrgaylerVSAoppropertiestree49da2d5afc18d01d309eef255e8757165c2487d9targetblank49da2d5a"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/rgayler/VSA_op_properties/tree/49da2d5afc18d01d309eef255e8757165c2487d9" target="_blank">49da2d5</a> </a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomrgaylerVSAoppropertiestree388a584242269057f880f76a2b45704fbe5d34f2targetblank388a584a"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/rgayler/VSA_op_properties/tree/388a584242269057f880f76a2b45704fbe5d34f2" target="_blank">388a584</a> </a>
 </p>
 </div>
-<div id="strongRepositoryversionstrongahrefhttpsgithubcomrgaylerVSAoppropertiestree49da2d5afc18d01d309eef255e8757165c2487d9targetblank49da2d5a" class="panel-collapse collapse">
+<div id="strongRepositoryversionstrongahrefhttpsgithubcomrgaylerVSAoppropertiestree388a584242269057f880f76a2b45704fbe5d34f2targetblank388a584a" class="panel-collapse collapse">
 <div class="panel-body">
 <p>
 Great! You are using Git for version control. Tracking code development and connecting the code version to the results is critical for reproducibility.
 </p>
 <p>
-The results in this page were generated with repository version <a href="https://github.com/rgayler/VSA_op_properties/tree/49da2d5afc18d01d309eef255e8757165c2487d9" target="_blank">49da2d5</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
+The results in this page were generated with repository version <a href="https://github.com/rgayler/VSA_op_properties/tree/388a584242269057f880f76a2b45704fbe5d34f2" target="_blank">388a584</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
 </p>
 <p>
 Note that you need to be careful to ensure that all relevant files for the analysis have been committed to Git prior to generating the results (you can use <code>wflow_publish</code> or <code>wflow_git_commit</code>). workflowr only checks the R Markdown file, but you know if there are other scripts or data files that it depends on. Below is the status of the Git repository when the results were generated:
@@ -523,10 +527,6 @@ Ignored files:
     Ignored:    .Rhistory
     Ignored:    .Rproj.user/
     Ignored:    .tresorit/
-
-Unstaged changes:
-    Modified:   analysis/VSA_operators.bibtex
-    Modified:   paper/README.md
 
 </code></pre>
 <p>
@@ -565,6 +565,40 @@ Message
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>
+Rmd
+</td>
+<td>
+<a href="https://github.com/rgayler/VSA_op_properties/blob/388a584242269057f880f76a2b45704fbe5d34f2/analysis/simulation.Rmd" target="_blank">388a584</a>
+</td>
+<td>
+Ross Gayler
+</td>
+<td>
+2020-06-13
+</td>
+<td>
+wflow_publish("analysis/*.Rmd")
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/rgayler/VSA_op_properties/b9540bd7801369adad26366b23b8b23d15d6098b/docs/simulation.html" target="_blank">b9540bd</a>
+</td>
+<td>
+Ross Gayler
+</td>
+<td>
+2020-06-13
+</td>
+<td>
+Build site.
+</td>
+</tr>
 <tr>
 <td>
 html
@@ -811,11 +845,108 @@ Initial project structure
 </div>
 </div>
 <p>This notebook contains the simulations informing the content of output paper. In addition to the simulations it contains notes on the coding and interpretation of the simulations.</p>
-<p>Data and figures to be used in the output paper must be saved to the <code>output</code> directory.</p>
-<div id="whatevs" class="section level2">
-<h2>Whatevs</h2>
-<pre class="r"><code>1 + 1</code></pre>
-<pre><code>[1] 2</code></pre>
+<p>Data and figures to be used in the output paper must be saved to the <code>output\</code> directory.</p>
+<p>Ideally there would be some way of cross-referencing points in the <code>skeleton</code> document with code chunks and text in the <code>simulation</code> document but this doesn’t seem to be possible when using <code>{workflowr}</code>. I don’t want to merge the two documents into one because I think that would be very unwieldy while trying to reorganise the skeleton.</p>
+<div id="data-flow-graph" class="section level2">
+<h2>Data flow graph</h2>
+<p>Diagrams to illustrate the point that the mayhs needs to be compatible with implementation.</p>
+<p>The graphs have a fixed topology. Each edge and vertex corresponds to some fixed, specific hardware. You are not going to have an arbitrarily large graph to deal with arbitrarily long inputs.</p>
+<p>Graphviz <a href="https://graphviz.org/documentation/">documentation</a> DiagrammeR <a href="https://rich-iannone.github.io/DiagrammeR/docs.html">documentation</a></p>
+<pre class="r"><code>library(DiagrammeR)
+# export diagrams to SVG for inclusion in output paper?
+
+# A + B
+# sum(A, B)
+#
+# The implementation is inherently noncommutative because the two inputs are distinct
+# although the calculation it implements may be commutative
+
+grViz(&quot;
+  digraph sum_a_b {
+    
+    # HD input values
+    node [shape = none]
+    A; B
+    
+    # HD anonymous output values
+    node [shape = plaintext]
+    output [label = &#39;&#39;]
+    
+    # operator
+    node [shape = circle]
+    op [label = &#39;sum(L, R)&#39;]
+    
+    # connections
+    A-&gt;op [headlabel = &#39;L&#39;]
+    B-&gt;op [headlabel = &#39;R&#39;]
+    op-&gt;output
+  }
+&quot;)</code></pre>
+<div id="htmlwidget-a5db646266c753325e45" style="width:672px;height:480px;" class="grViz html-widget"></div>
+<script type="application/json" data-for="htmlwidget-a5db646266c753325e45">{"x":{"diagram":"\n  digraph sum_a_b {\n    \n    # HD input values\n    node [shape = none]\n    A; B\n    \n    # HD anonymous output values\n    node [shape = plaintext]\n    output [label = \"\"]\n    \n    # operator\n    node [shape = circle]\n    op [label = \"sum(L, R)\"]\n    \n    # connections\n    A->op [headlabel = \"L\"]\n    B->op [headlabel = \"R\"]\n    op->output\n  }\n","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<p>I need to re-read my basic algebra texts, but for now I assume that left or right associativity translates into a bracketing which translates into connection ordering.</p>
+<pre class="r"><code># ((A + B) + C)
+# sum(sum(A, B), C)
+#
+
+grViz(&quot;
+  digraph sum_a_b_c_left {
+    
+    # HD input values
+    node [shape = none]
+    A; B; C
+    
+    # HD anonymous output values
+    node [shape = plaintext]
+    output [label = &#39;&#39;]
+    
+    # operators
+    node [shape = circle]
+    op1 [label = &#39;sum(L, R)&#39;]
+    op2 [label = &#39;sum(L, R)&#39;]
+    
+    # connections
+    A-&gt;op1 [headlabel = &#39;L&#39;]
+    B-&gt;op1 [headlabel = &#39;R&#39;]
+    
+    op1-&gt;op2 [headlabel = &#39;L&#39;]
+    C-&gt;op2 [headlabel = &#39;R&#39;]
+    op2-&gt;output
+  }
+&quot;)</code></pre>
+<div id="htmlwidget-16404ccfb1ce4603425e" style="width:672px;height:480px;" class="grViz html-widget"></div>
+<script type="application/json" data-for="htmlwidget-16404ccfb1ce4603425e">{"x":{"diagram":"\n  digraph sum_a_b_c_left {\n    \n    # HD input values\n    node [shape = none]\n    A; B; C\n    \n    # HD anonymous output values\n    node [shape = plaintext]\n    output [label = \"\"]\n    \n    # operators\n    node [shape = circle]\n    op1 [label = \"sum(L, R)\"]\n    op2 [label = \"sum(L, R)\"]\n    \n    # connections\n    A->op1 [headlabel = \"L\"]\n    B->op1 [headlabel = \"R\"]\n    \n    op1->op2 [headlabel = \"L\"]\n    C->op2 [headlabel = \"R\"]\n    op2->output\n  }\n","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<pre class="r"><code># (A + (B + C))
+# sum(A, sum(B, C))
+#
+
+grViz(&quot;
+  digraph sum_a_b_c_left {
+    
+    # HD input values
+    node [shape = none]
+    A; B; C
+    
+    # HD anonymous output values
+    node [shape = plaintext]
+    output [label = &#39;&#39;]
+    
+    # operators
+    node [shape = circle]
+    op1 [label = &#39;sum(L, R)&#39;]
+    op2 [label = &#39;sum(L, R)&#39;]
+    
+    # connections
+    B-&gt;op1 [headlabel = &#39;L&#39;]
+    C-&gt;op1 [headlabel = &#39;R&#39;]
+    
+    A-&gt;op2 [headlabel = &#39;L&#39;]
+    op1-&gt;op2 [headlabel = &#39;R&#39;]
+    op2-&gt;output
+  }
+&quot;)</code></pre>
+<div id="htmlwidget-941f8e7bcfc1b6753121" style="width:672px;height:480px;" class="grViz html-widget"></div>
+<script type="application/json" data-for="htmlwidget-941f8e7bcfc1b6753121">{"x":{"diagram":"\n  digraph sum_a_b_c_left {\n    \n    # HD input values\n    node [shape = none]\n    A; B; C\n    \n    # HD anonymous output values\n    node [shape = plaintext]\n    output [label = \"\"]\n    \n    # operators\n    node [shape = circle]\n    op1 [label = \"sum(L, R)\"]\n    op2 [label = \"sum(L, R)\"]\n    \n    # connections\n    B->op1 [headlabel = \"L\"]\n    C->op1 [headlabel = \"R\"]\n    \n    A->op2 [headlabel = \"L\"]\n    op1->op2 [headlabel = \"R\"]\n    op2->output\n  }\n","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
 <br>
 <p>
 <button type="button" class="btn btn-default btn-workflowr btn-workflowr-sessioninfo" data-toggle="collapse" data-target="#workflowr-sessioninfo" style="display: block;">
@@ -844,15 +975,17 @@ attached base packages:
 [1] stats     graphics  grDevices utils     datasets  methods   base     
 
 other attached packages:
-[1] workflowr_1.6.2
+[1] DiagrammeR_1.0.6.1 workflowr_1.6.2   
 
 loaded via a namespace (and not attached):
- [1] Rcpp_1.0.4.6    rprojroot_1.3-2 digest_0.6.25   later_1.1.0.1  
- [5] R6_2.4.1        backports_1.1.7 git2r_0.27.1    magrittr_1.5   
- [9] evaluate_0.14   stringi_1.4.6   rlang_0.4.6     fs_1.4.1       
-[13] promises_1.1.1  whisker_0.4     rmarkdown_2.2   tools_3.6.3    
-[17] stringr_1.4.0   glue_1.4.1      httpuv_1.5.4    xfun_0.14      
-[21] yaml_2.2.1      compiler_3.6.3  htmltools_0.4.0 knitr_1.28     </code></pre>
+ [1] Rcpp_1.0.4.6       rstudioapi_0.11    knitr_1.28         whisker_0.4       
+ [5] magrittr_1.5       R6_2.4.1           rlang_0.4.6        stringr_1.4.0     
+ [9] tools_3.6.3        visNetwork_2.0.9   xfun_0.14          git2r_0.27.1      
+[13] htmltools_0.4.0    yaml_2.2.1         digest_0.6.25      rprojroot_1.3-2   
+[17] RColorBrewer_1.1-2 later_1.1.0.1      htmlwidgets_1.5.1  promises_1.1.1    
+[21] fs_1.4.1           glue_1.4.1         evaluate_0.14      rmarkdown_2.2     
+[25] stringi_1.4.6      compiler_3.6.3     backports_1.1.7    jsonlite_1.6.1    
+[29] httpuv_1.5.4      </code></pre>
 </div>
 </div>
 
