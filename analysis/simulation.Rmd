@@ -13,11 +13,128 @@ In addition to the simulations
 it contains notes on the coding and interpretation of the simulations.
 
 Data and figures to be used in the output paper
-must be saved to the `output` directory.
+must be saved to the `output\` directory.
 
-## Whatevs
+Ideally there would be some way of cross-referencing points in the `skeleton` document
+with code chunks and text in the `simulation` document
+but this doesn't seem to be possible when using `{workflowr}`.
+I don't want to merge the two documents into one
+because I think that would be very unwieldy
+while trying to reorganise the skeleton.
+
+
+## Data flow graph
+
+Diagrams to illustrate the point that the mayhs needs to be compatible with implementation.
+
+The graphs have a fixed topology.
+Each edge and vertex corresponds to some fixed, specific hardware.
+You are not going to have an arbitrarily large graph to deal with arbitrarily long inputs.
+
+Graphviz [documentation](https://graphviz.org/documentation/)
+DiagrammeR [documentation](https://rich-iannone.github.io/DiagrammeR/docs.html)
 
 ```{r}
-1 + 1
+library(DiagrammeR)
+# export diagrams to SVG for inclusion in output paper?
+
+# A + B
+# sum(A, B)
+#
+# The implementation is inherently noncommutative because the two inputs are distinct
+# although the calculation it implements may be commutative
+
+grViz("
+  digraph sum_a_b {
+    
+    # HD input values
+    node [shape = none]
+    A; B
+    
+    # HD anonymous output values
+    node [shape = plaintext]
+    output [label = '']
+    
+    # operator
+    node [shape = circle]
+    op [label = 'sum(L, R)']
+    
+    # connections
+    A->op [headlabel = 'L']
+    B->op [headlabel = 'R']
+    op->output
+  }
+")
+```
+
+I need to re-read my basic algebra texts,
+but for now I assume that left or right associativity translates into a bracketing
+which translates into connection ordering.
+
+```{r}
+
+# ((A + B) + C)
+# sum(sum(A, B), C)
+#
+
+grViz("
+  digraph sum_a_b_c_left {
+    
+    # HD input values
+    node [shape = none]
+    A; B; C
+    
+    # HD anonymous output values
+    node [shape = plaintext]
+    output [label = '']
+    
+    # operators
+    node [shape = circle]
+    op1 [label = 'sum(L, R)']
+    op2 [label = 'sum(L, R)']
+    
+    # connections
+    A->op1 [headlabel = 'L']
+    B->op1 [headlabel = 'R']
+    
+    op1->op2 [headlabel = 'L']
+    C->op2 [headlabel = 'R']
+    op2->output
+  }
+")
+```
+
+
+```{r}
+
+# (A + (B + C))
+# sum(A, sum(B, C))
+#
+
+grViz("
+  digraph sum_a_b_c_left {
+    
+    # HD input values
+    node [shape = none]
+    A; B; C
+    
+    # HD anonymous output values
+    node [shape = plaintext]
+    output [label = '']
+    
+    # operators
+    node [shape = circle]
+    op1 [label = 'sum(L, R)']
+    op2 [label = 'sum(L, R)']
+    
+    # connections
+    B->op1 [headlabel = 'L']
+    C->op1 [headlabel = 'R']
+    
+    A->op2 [headlabel = 'L']
+    op1->op2 [headlabel = 'R']
+    op2->output
+  }
+")
 ```
 

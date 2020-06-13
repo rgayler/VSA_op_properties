@@ -14,6 +14,13 @@ It also contains some meta-level notes.
 
 Notation: **&rarr;XX** indicates a question or action aimed at person *XX*.
 
+Ideally there would be some way of cross-referencing points in the `skeleton` document
+with code chunks and text in the `simulation` document
+but this doesn't seem to be possible when using `{workflowr}`.
+I don't want to merge the two documents into one
+because I think that would be very unwieldy
+while trying to reorganise the skeleton.
+
 ---
 
 RG expects that this will be quite a long paper
@@ -134,7 +141,7 @@ or are unary and binary operators fundamental in some sense?
   * Direction encodes sequence of operators and arguments applied
   * Magnitude encodes 'support' for the representation
 
-## Similarity
+## Similarity {#sim}
 
 * Similarity measure is core to VSA
   * Argue that point from a VSA pragmatics view
@@ -178,7 +185,7 @@ or are unary and binary operators fundamental in some sense?
 * Diagonal outer-product compressions are element-wise
   * Do all algebraic properties follow from considering only one element? (CG?)
   
-### Probabilistic parameterisation of single-element binary opertor
+### Probabilistic parameterisation of single-element binary operator {#prob-param}
 
 * Focus on implementation means that operator definition must be 'local'
 (i.e. output must depend only on the inputs and locally available information)
