@@ -444,16 +444,16 @@ This reproducible <a href="http://rmarkdown.rstudio.com">R Markdown</a> analysis
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomrgaylerVSAoppropertiestree7d72aae8f804a016e33fc447be9f60a2acfa0f2ftargetblank7d72aaea"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/rgayler/VSA_op_properties/tree/7d72aae8f804a016e33fc447be9f60a2acfa0f2f" target="_blank">7d72aae</a> </a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomrgaylerVSAoppropertiestree49da2d5afc18d01d309eef255e8757165c2487d9targetblank49da2d5a"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/rgayler/VSA_op_properties/tree/49da2d5afc18d01d309eef255e8757165c2487d9" target="_blank">49da2d5</a> </a>
 </p>
 </div>
-<div id="strongRepositoryversionstrongahrefhttpsgithubcomrgaylerVSAoppropertiestree7d72aae8f804a016e33fc447be9f60a2acfa0f2ftargetblank7d72aaea" class="panel-collapse collapse">
+<div id="strongRepositoryversionstrongahrefhttpsgithubcomrgaylerVSAoppropertiestree49da2d5afc18d01d309eef255e8757165c2487d9targetblank49da2d5a" class="panel-collapse collapse">
 <div class="panel-body">
 <p>
 Great! You are using Git for version control. Tracking code development and connecting the code version to the results is critical for reproducibility.
 </p>
 <p>
-The results in this page were generated with repository version <a href="https://github.com/rgayler/VSA_op_properties/tree/7d72aae8f804a016e33fc447be9f60a2acfa0f2f" target="_blank">7d72aae</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
+The results in this page were generated with repository version <a href="https://github.com/rgayler/VSA_op_properties/tree/49da2d5afc18d01d309eef255e8757165c2487d9" target="_blank">49da2d5</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
 </p>
 <p>
 Note that you need to be careful to ensure that all relevant files for the analysis have been committed to Git prior to generating the results (you can use <code>wflow_publish</code> or <code>wflow_git_commit</code>). workflowr only checks the R Markdown file, but you know if there are other scripts or data files that it depends on. Below is the status of the Git repository when the results were generated:
@@ -463,6 +463,10 @@ Ignored files:
     Ignored:    .Rhistory
     Ignored:    .Rproj.user/
     Ignored:    .tresorit/
+
+Unstaged changes:
+    Modified:   analysis/VSA_operators.bibtex
+    Modified:   paper/README.md
 
 </code></pre>
 <p>
@@ -501,6 +505,40 @@ Message
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>
+Rmd
+</td>
+<td>
+<a href="https://github.com/rgayler/VSA_op_properties/blob/49da2d5afc18d01d309eef255e8757165c2487d9/analysis/skeleton.Rmd" target="_blank">49da2d5</a>
+</td>
+<td>
+Ross Gayler
+</td>
+<td>
+2020-06-13
+</td>
+<td>
+wflow_publish("analysis/*.Rmd")
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/rgayler/VSA_op_properties/f43481133ebfebb78fc80aebbae77d885b687d5f/docs/skeleton.html" target="_blank">f434811</a>
+</td>
+<td>
+Ross Gayler
+</td>
+<td>
+2020-06-13
+</td>
+<td>
+Build site.
+</td>
+</tr>
 <tr>
 <td>
 html
@@ -798,24 +836,31 @@ Initial project structure
 </div>
 </div>
 <p>This is the skeleton of the output paper. It also contains some meta-level notes.</p>
+<p>Notation: <strong>→XX</strong> indicates a question or action aimed at person <em>XX</em>.</p>
 <hr />
 <p>RG expects that this will be quite a long paper because of the amount of relevant background to be covered (the empirical component will be relatively straightforward). It <strong>won’t</strong> be suitable for a classic computer science 6-page conference paper. FWIW, <a href="https://peerj.com/computer-science/">PeerJ Computer Science</a> doesn’t appear to have a page limit.</p>
-<p>CG - For everything that is done empirically it would be helpful to have mathematical argument showing what is expected. To the extent that is possible you could, in principle, run with the maths and drop the empirical component - but I like empirical demonstration to give some confidence that the maths isn’t flawed.</p>
+<p><strong>→SR</strong> A lot of the background information I expect to need here should probably be included in SR’s cookbook. If that is so, would it be better to treat the cookbook as the primary repository for that information and have pointers from this paper? That would make this paper shorter, but no longer self-contained. That would also raise issues about the publication order of this paper and the cookbook, and how to deal with changing content if the cookbook evolves over time.</p>
+<p><strong>→CG</strong> - For everything that is done empirically it would be helpful to have mathematical argument showing what results are expected. To the extent that is possible you could, in principle, run with the maths and drop the empirical component - but RG likes empirical demonstration to give some confidence that the maths isn’t flawed.</p>
 <div id="introduction" class="section level1">
 <h1>Introduction</h1>
 <ul>
 <li><p>Something like the introduction of <span class="citation">Schlegel, Neubert, &amp; Protzel (2020)</span></p></li>
 <li><p>Note the focus on implementation (biological or artificial). This may influence some of the mathematical choices made later. Emphasise that the maths is a <em>model</em> of implementable systems rather than free-standing maths.</p>
 <ul>
-<li>RG vaguely remembers recently seeing a mention of graph-structured computation (i.e. data flow graphs rather than graphs as the subject of computation) as a known area of study. Check whether this area is of any use to us (CG?).</li>
-<li>This point about focus on implementation is most likely relevant in that parenthesization of math expressions to represent associativity translates into alternate wiring of the implementation data flow graph. Give example here with diagrams.</li>
+<li>RG vaguely remembers recently seeing a mention of graph-structured computation (i.e. data flow graphs rather than graphs as the subject of computation) as a known area of study.<br />
+<strong>→RG</strong> Find references to computation graphs.<br />
+<strong>→CG?</strong> Check whether computation graphs is of any use to us.</li>
+<li>This point about focus on implementation is most likely relevant in that parenthesization of math expressions to represent associativity translates into alternate wiring of the implementation data flow graph.
+<ul>
+<li><strong>→RG</strong> Give example here with diagrams.</li>
+</ul></li>
 </ul></li>
 <li><p>A data flow graph is actually an oriented <em>hypergraph</em>, where hyperedges correspond to operators/functions with distinguished arguments and output, and vertices correspond to HD vector values (thought of as ‘registers’ if you like).</p>
 <ul>
-<li>Side question to CG: Vector space maths seems to be written as though there’s only one vector space. In an implementation there are (arguably) as many vector spaces as there are vertices in the data flow hypergraph. Is this a relevant distinction and worth pointing out?
+<li><strong>→CG</strong> Side question: Vector space maths seems to be written as though there’s only one vector space. In an implementation there are (arguably) as many vector spaces as there are vertices in the data flow hypergraph. Is this a relevant distinction and worth pointing out?
 <ul>
 <li>For example, we generally assume that each of the vertices has the same dimensionality, but that’s not essential, and in the biological setting it’s unlikely.</li>
-<li>Along the same lines, permutation operators feel completely different in a biological setting: The input and output vertices are generally not identical dimensionality; The neurons aren’t nicely indexed, that’s externally applied labelling; Given that arbitrariness, every connection between two registers is a permutation.</li>
+<li>Along the same lines, permutation operators feel completely different in a biological setting: The input and output vertices are generally not identical dimensionality; The neurons aren’t nicely indexed, that’s externally applied labelling. Given that arbitrariness, every connection between two registers is a permutation.</li>
 <li>Also, in mathematical and artificial systems we can easily have permutations and their inverses, whereas in biological systems inverse permutations are implausible.</li>
 </ul></li>
 </ul></li>
@@ -826,7 +871,7 @@ Initial project structure
 <div id="basic-set-of-vsa-operators" class="section level2">
 <h2>Basic set of VSA operators</h2>
 <ul>
-<li><p>At this point, ignore the more unusual operators like CDT binding.</p></li>
+<li><p>Park discussion of the more unusual operators like CDT binding until we have an agreed structure for the typical operators.</p></li>
 <li><p>Sum-like, product-like, permutation</p>
 <ul>
 <li>Commonly thought of as binding, bundling, protect because that’s how they are typically used in systems but best not to think of them that way. The operators have mathematical properties and the job of the system designer is to design the system to extract useful work from those properties.</li>
@@ -835,15 +880,16 @@ Initial project structure
 <ul>
 <li>For initial explanation, think of a high-dimensional (say, 10k) real vector space</li>
 </ul></li>
+<li><p><strong>→CG</strong> Side question: Does maths unreasonably privilege unary and binary operators over operators with more arguments (possibly because a written representation only offers before and after positions for the arguments wrt an infix operator) or are unary and binary operators fundamental in some sense?</p></li>
 <li><p>Sum-like operator is <em>element-wise</em> ‘sum’ of vectors</p></li>
 <li><p>Permutation operator is a fixed re-ordering of elements in a vector.</p>
 <ul>
-<li>In a fixed finite data flow hypergraph (i.e. a physical realisation) there would be a fixed, finite number of permutations.</li>
+<li>In a fixed finite data flow hypergraph (i.e. a physical realisation) there would be a fixed, finite number of specific permutations.</li>
 <li>In an artificial system the same permutation could appear at multiple locations in the data flow hypergraph, and having one permutation be the inverse of another is no problem.</li>
 <li>In a biological system each permutation would most likely be unique, and getting an inverse to some other permutation is unlikely.</li>
 </ul></li>
 <li><p>Product-like operator is a bit more complex</p></li>
-<li><p>Start with Smolensky 1990 - Tensor product variable binding</p>
+<li><p>Start with <span class="citation">Smolensky (1990)</span>: tensor product variable binding</p>
 <ul>
 <li>Showed that it is possible to represent composite discrete data structures in a vector space and manipulate those structures with vector space transformations.</li>
 <li>Product-like operator is tensor product (= outer product)
@@ -851,6 +897,7 @@ Initial project structure
 <li>Very inconvenient for implementation because dimensionality increases exponentially with the number vectors combined</li>
 </ul></li>
 <li>Mention Fock algebras? (e.g. <span class="citation">beim Graben et al. (2020)</span>, although I think there’s a much earlier mention by Smolensky)</li>
+<li>The elements of a tensor are structured wrt the indices, but it is possible to treat a tensor as a vector by discarding the index structure of the elements.</li>
 </ul></li>
 <li><p>VSA can be interpreted as a lossy compression of the outer product (Plate 1994 - Thesis?)</p>
 <ul>
@@ -863,7 +910,14 @@ Initial project structure
 </ul></li>
 </ul></li>
 <li>Plate pointed out that sums of random subsets of the elements of the outer product would also work</li>
-<li>Relate to Johnson-Lindenstrauss theorem? This would make more sense after covering the centrality of vector similarity</li>
+<li>Relate to Johnson-Lindenstrauss Lemma (<span class="citation">Venkatasubramanian &amp; Wang (2011)</span>)? (Is this a good reference?)
+<ul>
+<li>This might make more sense after covering the centrality of vector similarity in VSA</li>
+</ul></li>
+</ul></li>
+<li><p>RG would be very interested to see an empirical demonstration of the similarity of tensor representations interpreted as vectors</p>
+<ul>
+<li>Also project the vector representations to higher and lower dimensionality.</li>
 </ul></li>
 </ul>
 </div>
@@ -874,13 +928,13 @@ Initial project structure
 <ul>
 <li>complex, real, {0,1}, {-1,+1}, whatever the hell geometric algebras are</li>
 </ul></li>
-<li>Dimensionality compensates for resolution (Plate?)</li>
-<li>Arguable to run with binary resolution as our guinea-pig?
+<li>Dimensionality compensates for resolution <span class="citation">Plate (1994)</span>, pages ???</li>
+<li>Is it arguable to run with binary resolution as our guinea-pig?
 <ul>
-<li>Plate 1994 had some points about resolution</li>
+<li><span class="citation">Plate (1994)</span> pages ??? made some points about element resolution</li>
 <li>… also pointed out that BSC is equivalent to Frequency domain HRR with phase quantised to binary levels</li>
 </ul></li>
-<li>Interpretation of vectors as analog representation of discrete structure
+<li>Interpretation of vectors as analog representation of discrete structure (cite RG talk at Redwood Center?)
 <ul>
 <li>Direction encodes sequence of operators and arguments applied</li>
 <li>Magnitude encodes ‘support’ for the representation</li>
@@ -890,13 +944,33 @@ Initial project structure
 <div id="similarity" class="section level2">
 <h2>Similarity</h2>
 <ul>
-<li><p>Similarity measure is core (math argument for that?)</p></li>
-<li><p>Argument for angular measure if similarity (distance doesn’t work in HD)</p></li>
-<li><p>Similarity measure as sum over elements</p></li>
-<li><p>Need for graded similarity?</p></li>
-<li><p>Raise centring of similarity measure as an issue.</p>
+<li>Similarity measure is core to VSA
+<ul>
+<li>Argue that point from a VSA pragmatics view</li>
+<li><strong>→CG</strong> Is the similarity measure (inner product?) an essential part of the definition of a vector space?</li>
+</ul></li>
+<li>Argument for angular measure of similarity (distance doesn’t work in HD)</li>
+<li>Similarity measure as sum over element-wise similarity
+<ul>
+<li>Makes element similarity definition important</li>
+<li>Makes vector similarity inherently graded (because its the average over a large number of elements)
+<ul>
+<li>even if the element similarity is not graded</li>
+</ul></li>
+</ul></li>
+<li>Is it arguable that graded vector similarity is essential for VSA?
+<ul>
+<li>Allows weighted sums of vectors</li>
+<li>Allows graded evolution of solution vectors in recurrent circuits
+<ul>
+<li>Accumulation of weak evidence</li>
+</ul></li>
+</ul></li>
+<li>Raise centring of similarity measure as an issue.
 <ul>
 <li>Probably do empirical work using both centred and non-centred similarity.</li>
+<li>Relationship to things like non-negative matrix factorisation?</li>
+<li>Domain-specific utility? e.g. existence/probability is non-negative, whereas weight of evidence is signed</li>
 </ul></li>
 </ul>
 </div>
@@ -918,7 +992,7 @@ Initial project structure
 <li>permutation preserves similarity structure between vectors</li>
 </ul></li>
 <li>Needs some thought on the relationship between product and permutation</li>
-<li>Category theorists have views on the essence of sum-like and product-like operators? (CG?)</li>
+<li><strong>→CG?</strong> Category theorists have views on the essence of sum-like and product-like operators?</li>
 </ul>
 </div>
 <div id="properties-of-full-outer-product-compressions" class="section level2">
@@ -935,7 +1009,7 @@ Initial project structure
 <div id="probabilistic-parameterisation-of-single-element-binary-opertor" class="section level3">
 <h3>Probabilistic parameterisation of single-element binary opertor</h3>
 <ul>
-<li>Focus on implementation means operator definition must be ‘local’ (i.e. output must depend only on the inputs and locally available information)
+<li>Focus on implementation means that operator definition must be ‘local’ (i.e. output must depend only on the inputs and locally available information)
 <ul>
 <li>2 inputs, 2 constants (the binary levels), dynamically realised random values (for probabilistic selection)</li>
 <li>Implement operator table as probabilistic selection from:
@@ -954,7 +1028,10 @@ Initial project structure
 <div id="map-of-operator-properties" class="section level3">
 <h3>Map of operator properties</h3>
 <ul>
-<li>Commutativity and associativity (CG is that all?)</li>
+<li>Commutativity and associativity
+<ul>
+<li><strong>→CG</strong> Is that all? Are there other algebraic properties that are fundamental?</li>
+</ul></li>
 <li>Distributivity requires two operators</li>
 <li>VSA distributes wrt product and permutation</li>
 <li>Distributivity is important implementation property because it gives parallelism for free</li>
@@ -967,8 +1044,8 @@ Initial project structure
 <ul>
 <li><p>The papers currently in the Zotero group library are probable references.</p>
 <ul>
-<li>I may add some more structure to the group library if needed.</li>
-<li>I will sort out some process to export the used references to the project directory.</li>
+<li>RG may add some more structure to the group library if needed.</li>
+<li>RG will sort out some process to export the used references to the project directory.</li>
 </ul></li>
 <li><p>Include software attributions, especially {workflowr}</p>
 <blockquote>
@@ -982,8 +1059,17 @@ Initial project structure
 <div id="ref-beimgrabenVectorSymbolicArchitectures2020">
 <p>beim Graben, P., Huber, M., Meyer, W., Römer, R., Tschöpe, C., &amp; Wolff, M. (2020). Vector symbolic architectures for context-free grammars. <em>arXiv:2003.05171 [Cs, Q-Bio]</em>. Retrieved from <a href="http://arxiv.org/abs/2003.05171">http://arxiv.org/abs/2003.05171</a></p>
 </div>
+<div id="ref-plateDistributedRepresentationsNested1994">
+<p>Plate, T. A. (1994). <em>Distributed Representations and Nested Compositional Structure</em> (Doctor of Philosophy). University of Toronto.</p>
+</div>
 <div id="ref-schlegelComparisonVectorSymbolic2020">
 <p>Schlegel, K., Neubert, P., &amp; Protzel, P. (2020). A comparison of Vector Symbolic Architectures. <em>arXiv:2001.11797 [Cs]</em>. Retrieved from <a href="http://arxiv.org/abs/2001.11797">http://arxiv.org/abs/2001.11797</a></p>
+</div>
+<div id="ref-smolenskyTensorProductVariable1990">
+<p>Smolensky, P. (1990). Tensor product variable binding and the representation of symbolic structures in connectionist systems. <em>Artificial Intelligence</em>, <em>46</em>(1-2), 159–216. <a href="https://doi.org/10.1016/0004-3702(90)90007-M">https://doi.org/10.1016/0004-3702(90)90007-M</a></p>
+</div>
+<div id="ref-venkatasubramanianJohnsonLindenstraussTransformEmpirical2011">
+<p>Venkatasubramanian, S., &amp; Wang, Q. (2011). <em>The Johnson-Lindenstrauss Transform: An Empirical Study</em>. 164–173.</p>
 </div>
 </div>
 </div>
