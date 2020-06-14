@@ -417,7 +417,7 @@ div.tocify {
 <div class="tab-content">
 <div id="summary" class="tab-pane fade in active">
 <p>
-<strong>Last updated:</strong> 2020-06-14
+<strong>Last updated:</strong> 2020-06-15
 </p>
 <p>
 <strong>Checks:</strong> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 7 <span class="glyphicon glyphicon-exclamation-sign text-danger" aria-hidden="true"></span> 0
@@ -508,16 +508,16 @@ This reproducible <a href="http://rmarkdown.rstudio.com">R Markdown</a> analysis
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomrgaylerVSAoppropertiestree94759fa8e893d810c94f8ee72c5e69a171080cb8targetblank94759faa"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/rgayler/VSA_op_properties/tree/94759fa8e893d810c94f8ee72c5e69a171080cb8" target="_blank">94759fa</a> </a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomrgaylerVSAoppropertiestree8e21d0c0a9bc65ad939ac3140dc7aceaf82c80bftargetblank8e21d0ca"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/rgayler/VSA_op_properties/tree/8e21d0c0a9bc65ad939ac3140dc7aceaf82c80bf" target="_blank">8e21d0c</a> </a>
 </p>
 </div>
-<div id="strongRepositoryversionstrongahrefhttpsgithubcomrgaylerVSAoppropertiestree94759fa8e893d810c94f8ee72c5e69a171080cb8targetblank94759faa" class="panel-collapse collapse">
+<div id="strongRepositoryversionstrongahrefhttpsgithubcomrgaylerVSAoppropertiestree8e21d0c0a9bc65ad939ac3140dc7aceaf82c80bftargetblank8e21d0ca" class="panel-collapse collapse">
 <div class="panel-body">
 <p>
 Great! You are using Git for version control. Tracking code development and connecting the code version to the results is critical for reproducibility.
 </p>
 <p>
-The results in this page were generated with repository version <a href="https://github.com/rgayler/VSA_op_properties/tree/94759fa8e893d810c94f8ee72c5e69a171080cb8" target="_blank">94759fa</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
+The results in this page were generated with repository version <a href="https://github.com/rgayler/VSA_op_properties/tree/8e21d0c0a9bc65ad939ac3140dc7aceaf82c80bf" target="_blank">8e21d0c</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
 </p>
 <p>
 Note that you need to be careful to ensure that all relevant files for the analysis have been committed to Git prior to generating the results (you can use <code>wflow_publish</code> or <code>wflow_git_commit</code>). workflowr only checks the R Markdown file, but you know if there are other scripts or data files that it depends on. Below is the status of the Git repository when the results were generated:
@@ -565,6 +565,40 @@ Message
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>
+Rmd
+</td>
+<td>
+<a href="https://github.com/rgayler/VSA_op_properties/blob/8e21d0c0a9bc65ad939ac3140dc7aceaf82c80bf/analysis/simulation.Rmd" target="_blank">8e21d0c</a>
+</td>
+<td>
+Ross Gayler
+</td>
+<td>
+2020-06-15
+</td>
+<td>
+wflow_publish("analysis/*.Rmd")
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/rgayler/VSA_op_properties/adcb5f5c3a74f05399745eecb30ba5c86f650068/docs/simulation.html" target="_blank">adcb5f5</a>
+</td>
+<td>
+Ross Gayler
+</td>
+<td>
+2020-06-14
+</td>
+<td>
+Build site.
+</td>
+</tr>
 <tr>
 <td>
 html
@@ -866,9 +900,11 @@ Initial project structure
 <p>Ideally there would be some way of cross-referencing points in the <code>skeleton</code> document with code chunks and text in the <code>simulation</code> document but this doesn’t seem to be possible when using <code>{workflowr}</code>. I don’t want to merge the two documents into one because I think that would be very unwieldy while trying to reorganise the skeleton.</p>
 <div id="data-flow-graph" class="section level2">
 <h2>Data flow graph</h2>
-<p>Diagrams to illustrate the point that the mayhs needs to be compatible with implementation.</p>
+<p>Diagrams to illustrate the point that the maths needs to be compatible with implementation.</p>
 <p>The graphs have a fixed topology. Each edge and vertex corresponds to some fixed, specific hardware. You are not going to have an arbitrarily large graph to deal with arbitrarily long inputs.</p>
 <p>Graphviz <a href="https://graphviz.org/documentation/">documentation</a> DiagrammeR <a href="https://rich-iannone.github.io/DiagrammeR/docs.html">documentation</a></p>
+<p>Here is the translation of <span class="math inline">\(A + B\)</span> to a circuit.</p>
+<p>Note that the sum operator has two distinct inputs (arbitrarily labeled <span class="math inline">\(L\)</span> and <span class="math inline">\(R\)</span>) corresponding to the two arguments to the <span class="math inline">\(sum\)</span> function, and that we have adopted the convention of mapping the left and right operands of <span class="math inline">\(+\)</span> to the <span class="math inline">\(L\)</span> and <span class="math inline">\(R\)</span> inputs.</p>
 <pre class="r"><code>library(DiagrammeR)
 # export diagrams to SVG for inclusion in output paper?
 
@@ -901,7 +937,8 @@ grViz(&quot;
 &quot;)</code></pre>
 <div id="htmlwidget-a5db646266c753325e45" style="width:672px;height:480px;" class="grViz html-widget"></div>
 <script type="application/json" data-for="htmlwidget-a5db646266c753325e45">{"x":{"diagram":"\n  digraph sum_a_b {\n    \n    # HD input values\n    node [shape = none]\n    A; B\n    \n    # HD anonymous output values\n    node [shape = plaintext]\n    output [label = \"\"]\n    \n    # operator\n    node [shape = circle]\n    op [label = \"sum(L, R)\"]\n    \n    # connections\n    A->op [headlabel = \"L\"]\n    B->op [headlabel = \"R\"]\n    op->output\n  }\n","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
-<p>I need to re-read my basic algebra texts, but for now I assume that left or right associativity translates into a bracketing which translates into connection ordering.</p>
+<p>Mathematical script can be ambiguous with respect to translation to a circuit. For example, given <span class="math inline">\(A + B + C\)</span> and a binary <span class="math inline">\(sum\)</span> operator the script does not specify the order in which the <span class="math inline">\(sum\)</span> operations take place. Operation ordering in the math script is indicated by parentheses, e.g. <span class="math inline">\((A + B) + C\)</span> indicates that the first <span class="math inline">\(sum\)</span> operator takes <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> as its arguments, and the arguments to the second <span class="math inline">\(sum\)</span> operator are the ouput of the first <span class="math inline">\(sum\)</span> operator and <span class="math inline">\(C\)</span>.</p>
+<p>This is illustrated in the second diagram. Note that the two <span class="math inline">\(sum\)</span> operators are distinct realisations of the the same abstract function.</p>
 <pre class="r"><code># ((A + B) + C)
 # sum(sum(A, B), C)
 #
@@ -933,6 +970,9 @@ grViz(&quot;
 &quot;)</code></pre>
 <div id="htmlwidget-16404ccfb1ce4603425e" style="width:672px;height:480px;" class="grViz html-widget"></div>
 <script type="application/json" data-for="htmlwidget-16404ccfb1ce4603425e">{"x":{"diagram":"\n  digraph sum_a_b_c_left {\n    \n    # HD input values\n    node [shape = none]\n    A; B; C\n    \n    # HD anonymous output values\n    node [shape = plaintext]\n    output [label = \"\"]\n    \n    # operators\n    node [shape = circle]\n    op1 [label = \"sum(L, R)\"]\n    op2 [label = \"sum(L, R)\"]\n    \n    # connections\n    A->op1 [headlabel = \"L\"]\n    B->op1 [headlabel = \"R\"]\n    \n    op1->op2 [headlabel = \"L\"]\n    C->op2 [headlabel = \"R\"]\n    op2->output\n  }\n","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<p>The math script <span class="math inline">\(A + B + C\)</span> could also be realised as <span class="math inline">\(A + (B + C)\)</span>, which is shown below. If <span class="math inline">\(((A + B) + C) = (A + (B + C))\)</span> then the operator <span class="math inline">\(+\)</span> is described as associative (otherwise it is non-associative).</p>
+<p>In math script, if <span class="math inline">\(A + B + C\)</span> is to be interpreted as <span class="math inline">\((A + B) + C\)</span> then <span class="math inline">\(+\)</span> is described as left-associative, and if it is to be interpreted as <span class="math inline">\(A + (B + C)\)</span> then <span class="math inline">\(+\)</span> is described as right-associative. Note that this left- or right-associative terminology is only needed for dealing with the ordering ambiguity within math-script when the operator is non-associative. This ambiguity doesn’t exist within VSA circuits because the data flow graph specifies the ordering. So left- or right-associativity is not a property of VSA circuits.</p>
+<p>On the other hand, associativity is a property of VSA circuits. Saying that the <span class="math inline">\(sum\)</span> operator is associative is an assertion that the circuits corresponding to <span class="math inline">\((A + B) + C\)</span> and <span class="math inline">\(A + (B + C)\)</span> will always produce identical results.</p>
 <pre class="r"><code># (A + (B + C))
 # sum(A, sum(B, C))
 #
@@ -964,6 +1004,10 @@ grViz(&quot;
 &quot;)</code></pre>
 <div id="htmlwidget-941f8e7bcfc1b6753121" style="width:672px;height:480px;" class="grViz html-widget"></div>
 <script type="application/json" data-for="htmlwidget-941f8e7bcfc1b6753121">{"x":{"diagram":"\n  digraph sum_a_b_c_left {\n    \n    # HD input values\n    node [shape = none]\n    A; B; C\n    \n    # HD anonymous output values\n    node [shape = plaintext]\n    output [label = \"\"]\n    \n    # operators\n    node [shape = circle]\n    op1 [label = \"sum(L, R)\"]\n    op2 [label = \"sum(L, R)\"]\n    \n    # connections\n    B->op1 [headlabel = \"L\"]\n    C->op1 [headlabel = \"R\"]\n    \n    A->op2 [headlabel = \"L\"]\n    op1->op2 [headlabel = \"R\"]\n    op2->output\n  }\n","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<p>Now consider the case where we wanted a circuit to produce the VSA representation of a list (say, <span class="math inline">\(\{A, B, ... I ... Z\}\)</span>) from representations of the items (<span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span>, etc.), for the purpose of emulating a psychological list memory experiment. We might decide that the desired representation is <span class="math inline">\(A + B + ... + I + ... + Z\)</span> for some suitable definition of <span class="math inline">\(+\)</span>. Translation of this mathematical description into a circuit raises some problems.</p>
+<p>Firstly, a VSA circuit should have a fixed topology whereas the list length varies between lists and lists are arbitrarily long.</p>
+<p>Secondly, the list items are encountered separately in sequence whereas the math script does not reflect this temporal aspect.</p>
+<p>An obvious</p>
 <br>
 <p>
 <button type="button" class="btn btn-default btn-workflowr btn-workflowr-sessioninfo" data-toggle="collapse" data-target="#workflowr-sessioninfo" style="display: block;">
