@@ -25,7 +25,7 @@ while trying to reorganise the skeleton.
 
 ## Data flow graph
 
-Diagrams to illustrate the point that the mayhs needs to be compatible with implementation.
+Diagrams to illustrate the point that the maths needs to be compatible with implementation.
 
 The graphs have a fixed topology.
 Each edge and vertex corresponds to some fixed, specific hardware.
@@ -33,6 +33,13 @@ You are not going to have an arbitrarily large graph to deal with arbitrarily lo
 
 Graphviz [documentation](https://graphviz.org/documentation/)
 DiagrammeR [documentation](https://rich-iannone.github.io/DiagrammeR/docs.html)
+
+Here is the translation of $A + B$ to a circuit.
+
+Note that the sum operator has two distinct inputs (arbitrarily labeled $L$ and $R$)
+corresponding to the two arguments to the $sum$ function,
+and that we have adopted the convention of mapping the left and right operands of $+$ 
+to the $L$ and $R$ inputs.
 
 ```{r}
 library(DiagrammeR)
@@ -67,9 +74,15 @@ grViz("
 ")
 ```
 
-I need to re-read my basic algebra texts,
-but for now I assume that left or right associativity translates into a bracketing
-which translates into connection ordering.
+Mathematical script can be ambiguous with respect to translation to a circuit.
+For example, given $A + B + C$ and a binary $sum$ operator
+the script does not specify the order in which the $sum$ operations take place.
+Operation ordering in the math script is indicated by parentheses, e.g. $(A + B) + C$
+indicates that the first $sum$ operator takes $A$ and $B$ as its arguments,
+and the arguments to the second $sum$ operator are the ouput of the first  $sum$ operator and $C$.
+
+This is illustrated in the second diagram.
+Note that the two $sum$ operators are distinct realisations of the the same abstract function.
 
 ```{r}
 
@@ -104,6 +117,21 @@ grViz("
 ")
 ```
 
+The math script $A + B + C$ could also be realised as $A + (B + C)$, which is shown below.
+If $((A + B) + C) = (A + (B + C))$ then the operator $+$ is described as associative (otherwise it is non-associative).
+
+In math script, if $A + B + C$ is to be interpreted as $(A + B) + C$ then $+$ is described as left-associative,
+and if it is to be interpreted as $A + (B + C)$ then $+$ is described as right-associative.
+Note that this left- or right-associative terminology is only needed 
+for dealing with the ordering ambiguity within math-script when the operator is non-associative.
+This ambiguity doesn't exist within VSA circuits
+because the data flow graph specifies the ordering.
+So left- or right-associativity is not a property of VSA circuits. 
+
+On the other hand, associativity is a property of VSA circuits.
+Saying that the $sum$ operator is associative
+is an assertion that the circuits corresponding to $(A + B) + C$ and $A + (B + C)$
+will always produce identical results.
 
 ```{r}
 
@@ -138,3 +166,16 @@ grViz("
 ")
 ```
 
+Now consider the case where we wanted a circuit to produce the VSA representation of a list 
+(say, $\{A, B, ... I ... Z\}$) from representations of the items ($A$, $B$, etc.),
+for the purpose of emulating a psychological list memory experiment.
+We might decide that the desired representation is $A + B + ... + I + ... + Z$ for some suitable definition of $+$.
+Translation of this mathematical description into a circuit raises some problems.
+
+Firstly, a VSA circuit should have a fixed topology whereas the list length varies between lists
+and lists are arbitrarily long.
+
+Secondly, the list items are encountered separately in sequence
+whereas the math script does not reflect this temporal aspect.
+
+An obvious 
