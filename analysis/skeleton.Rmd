@@ -45,6 +45,37 @@ run with the maths and drop the empirical component -
 but RG likes empirical demonstration
 to give some confidence that the maths isn't flawed.
 
+# Overview
+
+VSA is about using mathematical operators on very high dimensional vector sppaces as a basis for computation.
+They are interesting because they are very robust to noise and implementation errors
+which suits them to newly emerging computer technologies which are inherently less reliable
+as a consequence of their extreme miniaturisation.
+They are also of interest because of their potential relevance to neural computation.
+
+VSAs are a family of related approaches.
+Different researchers have devised a variety of instantiations of VSAs, 
+indicating that the primary computatuional properties
+are not strongly dependent on the details that vary between instantiations.
+These instantiations have been compareed and contrasted,
+however in this work we are approaching from the other direction
+and exploring what mathematical properties are essential to VSAs.
+
+VSAs are relatively simple systems
+involving a vector space and a small number of mathematical operators on the vector space.
+We explore conceptually, mathematically, and empirically the mathematical properties of these entities
+that are needed to make VSAs computationally useful.
+
+As an example, Stefan Reimann introduced a non-associative variant of the sum operator.
+The non-associativity is useful to capture some behavioural asymmetries in the modelling of human memory.
+Stefan used a probabilistic parameterisation of an extensive tabular definition of the operator.
+This can probably be expanded to cover the two standard VSA binary operators.
+Then the algebraic properties of the operators (e.g commutativity, associativity)
+can be mapped as a function of location in the parameter space.
+
+This is exploratory work, so the exploration may demonstrate that the above path is untenable,
+in which case we would need to distill from the exploration the lessons we think most useful for others.
+
 # Introduction
 
 * Something like the introduction of @schlegelComparisonVectorSymbolic2020
