@@ -31,7 +31,7 @@ The graphs have a fixed topology.
 Each edge and vertex corresponds to some fixed, specific hardware.
 You are not going to have an arbitrarily large graph to deal with arbitrarily long inputs.
 
-Graphviz [documentation](https://graphviz.org/documentation/)
+Graphviz [documentation](https://graphviz.org/documentation/)  
 DiagrammeR [documentation](https://rich-iannone.github.io/DiagrammeR/docs.html)
 
 Here is the translation of $A + B$ to a circuit.
@@ -140,7 +140,7 @@ will always produce identical results.
 #
 
 grViz("
-  digraph sum_a_b_c_left {
+  digraph sum_a_b_c_right {
     
     # HD input values
     node [shape = none]
@@ -178,4 +178,65 @@ and lists are arbitrarily long.
 Secondly, the list items are encountered separately in sequence
 whereas the math script does not reflect this temporal aspect.
 
-An obvious 
+An obvious solution to this is to set up a circuit with a single $sum$ operator
+and to sequentially accumulate the input items $A_i$
+into a cumulative memory representation $M_i$.
+
+The following circuit shows the heart of this.
+What it omits are mechanisms for:
+
+* parsing the input stream into discrete items
+* recognising the beginning and end of the list of items
+* initialising the cumulative memory representation $M_i$ at the beginning of the list
+* control and gating of the signals flowing around the circuit
+
+These are typically assumed away in mathematical psychology models,
+so I'm going to do the same here.
+
+Note that if the $L$ and $R$ arguments of $sum$ are to be treated differently
+this is equivalent to saying that $sum$ is noncommutative because $sum(A, B) \ne sum(B, A)$.
+
+An obvious possibility here is that the arguments of $sum$ could be weighted differently to (de-)emphasize the most recently added item.
+With some VSA realisations it may be possible to weight the arguments using a unary scalar multiplication operator.
+In other realisations (e.g. BSC) there is no unary weighting operator
+but it would be possible to define a weighted $sum$ operator.
+
+```{r}
+
+# M_(i+1) := M_i + A_i
+
+grViz("
+  digraph cumulative_update {
+  
+    # HD input values
+    node [shape = none]
+    A [label = 'A_i']
+    
+    subgraph {
+      rank = same
+    
+      # operator
+      node [shape = circle]
+      op [label = 'sum(L, R)']
+
+      # HD cumulative memory value
+      node [shape = plaintext]
+      M [label = 'M_i']
+    }
+  
+    # HD anonymous output values
+    node [shape = plaintext]
+    output [label = '']
+    
+    # connections
+    A->op [headlabel = 'L'; headport = nw]
+    M->op [headlabel = 'R'; headport = ne]
+    
+    op->M [tailport = s]
+    M->output
+  }
+")
+```
+
+
+
