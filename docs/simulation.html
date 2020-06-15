@@ -508,16 +508,16 @@ This reproducible <a href="http://rmarkdown.rstudio.com">R Markdown</a> analysis
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomrgaylerVSAoppropertiestree8e21d0c0a9bc65ad939ac3140dc7aceaf82c80bftargetblank8e21d0ca"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/rgayler/VSA_op_properties/tree/8e21d0c0a9bc65ad939ac3140dc7aceaf82c80bf" target="_blank">8e21d0c</a> </a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomrgaylerVSAoppropertiestree9e7bdbcef694899d12a43d7e1c707e4546c911ebtargetblank9e7bdbca"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/rgayler/VSA_op_properties/tree/9e7bdbcef694899d12a43d7e1c707e4546c911eb" target="_blank">9e7bdbc</a> </a>
 </p>
 </div>
-<div id="strongRepositoryversionstrongahrefhttpsgithubcomrgaylerVSAoppropertiestree8e21d0c0a9bc65ad939ac3140dc7aceaf82c80bftargetblank8e21d0ca" class="panel-collapse collapse">
+<div id="strongRepositoryversionstrongahrefhttpsgithubcomrgaylerVSAoppropertiestree9e7bdbcef694899d12a43d7e1c707e4546c911ebtargetblank9e7bdbca" class="panel-collapse collapse">
 <div class="panel-body">
 <p>
 Great! You are using Git for version control. Tracking code development and connecting the code version to the results is critical for reproducibility.
 </p>
 <p>
-The results in this page were generated with repository version <a href="https://github.com/rgayler/VSA_op_properties/tree/8e21d0c0a9bc65ad939ac3140dc7aceaf82c80bf" target="_blank">8e21d0c</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
+The results in this page were generated with repository version <a href="https://github.com/rgayler/VSA_op_properties/tree/9e7bdbcef694899d12a43d7e1c707e4546c911eb" target="_blank">9e7bdbc</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
 </p>
 <p>
 Note that you need to be careful to ensure that all relevant files for the analysis have been committed to Git prior to generating the results (you can use <code>wflow_publish</code> or <code>wflow_git_commit</code>). workflowr only checks the R Markdown file, but you know if there are other scripts or data files that it depends on. Below is the status of the Git repository when the results were generated:
@@ -565,6 +565,40 @@ Message
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>
+Rmd
+</td>
+<td>
+<a href="https://github.com/rgayler/VSA_op_properties/blob/9e7bdbcef694899d12a43d7e1c707e4546c911eb/analysis/simulation.Rmd" target="_blank">9e7bdbc</a>
+</td>
+<td>
+Ross Gayler
+</td>
+<td>
+2020-06-15
+</td>
+<td>
+wflow_publish("analysis/*.Rmd")
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/rgayler/VSA_op_properties/6741a54abda045e07bdec01a8b7b1cac16152b26/docs/simulation.html" target="_blank">6741a54</a>
+</td>
+<td>
+Ross Gayler
+</td>
+<td>
+2020-06-15
+</td>
+<td>
+Build site.
+</td>
+</tr>
 <tr>
 <td>
 Rmd
@@ -902,7 +936,8 @@ Initial project structure
 <h2>Data flow graph</h2>
 <p>Diagrams to illustrate the point that the maths needs to be compatible with implementation.</p>
 <p>The graphs have a fixed topology. Each edge and vertex corresponds to some fixed, specific hardware. You are not going to have an arbitrarily large graph to deal with arbitrarily long inputs.</p>
-<p>Graphviz <a href="https://graphviz.org/documentation/">documentation</a> DiagrammeR <a href="https://rich-iannone.github.io/DiagrammeR/docs.html">documentation</a></p>
+<p>Graphviz <a href="https://graphviz.org/documentation/">documentation</a><br />
+DiagrammeR <a href="https://rich-iannone.github.io/DiagrammeR/docs.html">documentation</a></p>
 <p>Here is the translation of <span class="math inline">\(A + B\)</span> to a circuit.</p>
 <p>Note that the sum operator has two distinct inputs (arbitrarily labeled <span class="math inline">\(L\)</span> and <span class="math inline">\(R\)</span>) corresponding to the two arguments to the <span class="math inline">\(sum\)</span> function, and that we have adopted the convention of mapping the left and right operands of <span class="math inline">\(+\)</span> to the <span class="math inline">\(L\)</span> and <span class="math inline">\(R\)</span> inputs.</p>
 <pre class="r"><code>library(DiagrammeR)
@@ -978,7 +1013,7 @@ grViz(&quot;
 #
 
 grViz(&quot;
-  digraph sum_a_b_c_left {
+  digraph sum_a_b_c_right {
     
     # HD input values
     node [shape = none]
@@ -1003,11 +1038,56 @@ grViz(&quot;
   }
 &quot;)</code></pre>
 <div id="htmlwidget-941f8e7bcfc1b6753121" style="width:672px;height:480px;" class="grViz html-widget"></div>
-<script type="application/json" data-for="htmlwidget-941f8e7bcfc1b6753121">{"x":{"diagram":"\n  digraph sum_a_b_c_left {\n    \n    # HD input values\n    node [shape = none]\n    A; B; C\n    \n    # HD anonymous output values\n    node [shape = plaintext]\n    output [label = \"\"]\n    \n    # operators\n    node [shape = circle]\n    op1 [label = \"sum(L, R)\"]\n    op2 [label = \"sum(L, R)\"]\n    \n    # connections\n    B->op1 [headlabel = \"L\"]\n    C->op1 [headlabel = \"R\"]\n    \n    A->op2 [headlabel = \"L\"]\n    op1->op2 [headlabel = \"R\"]\n    op2->output\n  }\n","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<script type="application/json" data-for="htmlwidget-941f8e7bcfc1b6753121">{"x":{"diagram":"\n  digraph sum_a_b_c_right {\n    \n    # HD input values\n    node [shape = none]\n    A; B; C\n    \n    # HD anonymous output values\n    node [shape = plaintext]\n    output [label = \"\"]\n    \n    # operators\n    node [shape = circle]\n    op1 [label = \"sum(L, R)\"]\n    op2 [label = \"sum(L, R)\"]\n    \n    # connections\n    B->op1 [headlabel = \"L\"]\n    C->op1 [headlabel = \"R\"]\n    \n    A->op2 [headlabel = \"L\"]\n    op1->op2 [headlabel = \"R\"]\n    op2->output\n  }\n","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
 <p>Now consider the case where we wanted a circuit to produce the VSA representation of a list (say, <span class="math inline">\(\{A, B, ... I ... Z\}\)</span>) from representations of the items (<span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span>, etc.), for the purpose of emulating a psychological list memory experiment. We might decide that the desired representation is <span class="math inline">\(A + B + ... + I + ... + Z\)</span> for some suitable definition of <span class="math inline">\(+\)</span>. Translation of this mathematical description into a circuit raises some problems.</p>
 <p>Firstly, a VSA circuit should have a fixed topology whereas the list length varies between lists and lists are arbitrarily long.</p>
 <p>Secondly, the list items are encountered separately in sequence whereas the math script does not reflect this temporal aspect.</p>
-<p>An obvious</p>
+<p>An obvious solution to this is to set up a circuit with a single <span class="math inline">\(sum\)</span> operator and to sequentially accumulate the input items <span class="math inline">\(A_i\)</span> into a cumulative memory representation <span class="math inline">\(M_i\)</span>.</p>
+<p>The following circuit shows the heart of this. What it omits are mechanisms for:</p>
+<ul>
+<li>parsing the input stream into discrete items</li>
+<li>recognising the beginning and end of the list of items</li>
+<li>initialising the cumulative memory representation <span class="math inline">\(M_i\)</span> at the beginning of the list</li>
+<li>control and gating of the signals flowing around the circuit</li>
+</ul>
+<p>These are typically assumed away in mathematical psychology models, so I’m going to do the same here.</p>
+<p>Note that if the <span class="math inline">\(L\)</span> and <span class="math inline">\(R\)</span> arguments of <span class="math inline">\(sum\)</span> are to be treated differently this is equivalent to saying that <span class="math inline">\(sum\)</span> is noncommutative because <span class="math inline">\(sum(A, B) \ne sum(B, A)\)</span>.</p>
+<p>An obvious possibility here is that the arguments of <span class="math inline">\(sum\)</span> could be weighted differently to (de-)emphasize the most recently added item. With some VSA realisations it may be possible to weight the arguments using a unary scalar multiplication operator. In other realisations (e.g. BSC) there is no unary weighting operator but it would be possible to define a weighted <span class="math inline">\(sum\)</span> operator.</p>
+<pre class="r"><code># M_(i+1) := M_i + A_i
+
+grViz(&quot;
+  digraph cumulative_update {
+  
+    # HD input values
+    node [shape = none]
+    A [label = &#39;A_i&#39;]
+    
+    subgraph {
+      rank = same
+    
+      # operator
+      node [shape = circle]
+      op [label = &#39;sum(L, R)&#39;]
+
+      # HD cumulative memory value
+      node [shape = plaintext]
+      M [label = &#39;M_i&#39;]
+    }
+  
+    # HD anonymous output values
+    node [shape = plaintext]
+    output [label = &#39;&#39;]
+    
+    # connections
+    A-&gt;op [headlabel = &#39;L&#39;; headport = nw]
+    M-&gt;op [headlabel = &#39;R&#39;; headport = ne]
+    
+    op-&gt;M [tailport = s]
+    M-&gt;output
+  }
+&quot;)</code></pre>
+<div id="htmlwidget-09008e95719670bb4229" style="width:672px;height:480px;" class="grViz html-widget"></div>
+<script type="application/json" data-for="htmlwidget-09008e95719670bb4229">{"x":{"diagram":"\n  digraph cumulative_update {\n  \n    # HD input values\n    node [shape = none]\n    A [label = \"A_i\"]\n    \n    subgraph {\n      rank = same\n    \n      # operator\n      node [shape = circle]\n      op [label = \"sum(L, R)\"]\n\n      # HD cumulative memory value\n      node [shape = plaintext]\n      M [label = \"M_i\"]\n    }\n  \n    # HD anonymous output values\n    node [shape = plaintext]\n    output [label = \"\"]\n    \n    # connections\n    A->op [headlabel = \"L\"; headport = nw]\n    M->op [headlabel = \"R\"; headport = ne]\n    \n    op->M [tailport = s]\n    M->output\n  }\n","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
 <br>
 <p>
 <button type="button" class="btn btn-default btn-workflowr btn-workflowr-sessioninfo" data-toggle="collapse" data-target="#workflowr-sessioninfo" style="display: block;">
@@ -1018,11 +1098,11 @@ grViz(&quot;
 <pre class="r"><code>sessionInfo()</code></pre>
 <pre><code>R version 3.6.3 (2020-02-29)
 Platform: x86_64-pc-linux-gnu (64-bit)
-Running under: Ubuntu 20.04 LTS
+Running under: Ubuntu 18.04.4 LTS
 
 Matrix products: default
-BLAS:   /usr/lib/x86_64-linux-gnu/blas/libblas.so.3.9.0
-LAPACK: /usr/lib/x86_64-linux-gnu/lapack/liblapack.so.3.9.0
+BLAS:   /usr/lib/x86_64-linux-gnu/blas/libblas.so.3.7.1
+LAPACK: /usr/lib/x86_64-linux-gnu/lapack/liblapack.so.3.7.1
 
 locale:
  [1] LC_CTYPE=en_AU.UTF-8       LC_NUMERIC=C              
