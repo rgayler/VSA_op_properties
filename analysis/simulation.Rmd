@@ -181,6 +181,7 @@ whereas the math script does not reflect this temporal aspect.
 An obvious solution to this is to set up a circuit with a single $sum$ operator
 and to sequentially accumulate the input items $A_i$
 into a cumulative memory representation $M_i$.
+*(I have no idea what an appropriate math script equivalent of this would be.)*
 
 The following circuit shows the heart of this.
 What it omits are mechanisms for:
@@ -210,7 +211,7 @@ grViz("
   
     # HD input values
     node [shape = none]
-    A [label = 'A_i']
+    A [label = 'A@_{i}']
     
     subgraph {
       rank = same
@@ -221,7 +222,7 @@ grViz("
 
       # HD cumulative memory value
       node [shape = plaintext]
-      M [label = 'M_i']
+      M [label = 'M@_{i}']
     }
   
     # HD anonymous output values
