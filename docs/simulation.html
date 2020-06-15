@@ -508,16 +508,16 @@ This reproducible <a href="http://rmarkdown.rstudio.com">R Markdown</a> analysis
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomrgaylerVSAoppropertiestree9e7bdbcef694899d12a43d7e1c707e4546c911ebtargetblank9e7bdbca"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/rgayler/VSA_op_properties/tree/9e7bdbcef694899d12a43d7e1c707e4546c911eb" target="_blank">9e7bdbc</a> </a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomrgaylerVSAoppropertiestree2309675f67a2ce2357355c93b4f52874caa49d63targetblank2309675a"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/rgayler/VSA_op_properties/tree/2309675f67a2ce2357355c93b4f52874caa49d63" target="_blank">2309675</a> </a>
 </p>
 </div>
-<div id="strongRepositoryversionstrongahrefhttpsgithubcomrgaylerVSAoppropertiestree9e7bdbcef694899d12a43d7e1c707e4546c911ebtargetblank9e7bdbca" class="panel-collapse collapse">
+<div id="strongRepositoryversionstrongahrefhttpsgithubcomrgaylerVSAoppropertiestree2309675f67a2ce2357355c93b4f52874caa49d63targetblank2309675a" class="panel-collapse collapse">
 <div class="panel-body">
 <p>
 Great! You are using Git for version control. Tracking code development and connecting the code version to the results is critical for reproducibility.
 </p>
 <p>
-The results in this page were generated with repository version <a href="https://github.com/rgayler/VSA_op_properties/tree/9e7bdbcef694899d12a43d7e1c707e4546c911eb" target="_blank">9e7bdbc</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
+The results in this page were generated with repository version <a href="https://github.com/rgayler/VSA_op_properties/tree/2309675f67a2ce2357355c93b4f52874caa49d63" target="_blank">2309675</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
 </p>
 <p>
 Note that you need to be careful to ensure that all relevant files for the analysis have been committed to Git prior to generating the results (you can use <code>wflow_publish</code> or <code>wflow_git_commit</code>). workflowr only checks the R Markdown file, but you know if there are other scripts or data files that it depends on. Below is the status of the Git repository when the results were generated:
@@ -565,6 +565,40 @@ Message
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>
+Rmd
+</td>
+<td>
+<a href="https://github.com/rgayler/VSA_op_properties/blob/2309675f67a2ce2357355c93b4f52874caa49d63/analysis/simulation.Rmd" target="_blank">2309675</a>
+</td>
+<td>
+Ross Gayler
+</td>
+<td>
+2020-06-15
+</td>
+<td>
+wflow_publish("analysis/*.Rmd")
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/rgayler/VSA_op_properties/e4b0259ef3775cd53c5c0e18dca9597707c034ac/docs/simulation.html" target="_blank">e4b0259</a>
+</td>
+<td>
+Ross Gayler
+</td>
+<td>
+2020-06-15
+</td>
+<td>
+Build site.
+</td>
+</tr>
 <tr>
 <td>
 Rmd
@@ -1042,7 +1076,7 @@ grViz(&quot;
 <p>Now consider the case where we wanted a circuit to produce the VSA representation of a list (say, <span class="math inline">\(\{A, B, ... I ... Z\}\)</span>) from representations of the items (<span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span>, etc.), for the purpose of emulating a psychological list memory experiment. We might decide that the desired representation is <span class="math inline">\(A + B + ... + I + ... + Z\)</span> for some suitable definition of <span class="math inline">\(+\)</span>. Translation of this mathematical description into a circuit raises some problems.</p>
 <p>Firstly, a VSA circuit should have a fixed topology whereas the list length varies between lists and lists are arbitrarily long.</p>
 <p>Secondly, the list items are encountered separately in sequence whereas the math script does not reflect this temporal aspect.</p>
-<p>An obvious solution to this is to set up a circuit with a single <span class="math inline">\(sum\)</span> operator and to sequentially accumulate the input items <span class="math inline">\(A_i\)</span> into a cumulative memory representation <span class="math inline">\(M_i\)</span>.</p>
+<p>An obvious solution to this is to set up a circuit with a single <span class="math inline">\(sum\)</span> operator and to sequentially accumulate the input items <span class="math inline">\(A_i\)</span> into a cumulative memory representation <span class="math inline">\(M_i\)</span>. <em>(I have no idea what an appropriate math script equivalent of this would be.)</em></p>
 <p>The following circuit shows the heart of this. What it omits are mechanisms for:</p>
 <ul>
 <li>parsing the input stream into discrete items</li>
@@ -1060,7 +1094,7 @@ grViz(&quot;
   
     # HD input values
     node [shape = none]
-    A [label = &#39;A_i&#39;]
+    A [label = &#39;A@_{i}&#39;]
     
     subgraph {
       rank = same
@@ -1071,7 +1105,7 @@ grViz(&quot;
 
       # HD cumulative memory value
       node [shape = plaintext]
-      M [label = &#39;M_i&#39;]
+      M [label = &#39;M@_{i}&#39;]
     }
   
     # HD anonymous output values
@@ -1087,7 +1121,7 @@ grViz(&quot;
   }
 &quot;)</code></pre>
 <div id="htmlwidget-09008e95719670bb4229" style="width:672px;height:480px;" class="grViz html-widget"></div>
-<script type="application/json" data-for="htmlwidget-09008e95719670bb4229">{"x":{"diagram":"\n  digraph cumulative_update {\n  \n    # HD input values\n    node [shape = none]\n    A [label = \"A_i\"]\n    \n    subgraph {\n      rank = same\n    \n      # operator\n      node [shape = circle]\n      op [label = \"sum(L, R)\"]\n\n      # HD cumulative memory value\n      node [shape = plaintext]\n      M [label = \"M_i\"]\n    }\n  \n    # HD anonymous output values\n    node [shape = plaintext]\n    output [label = \"\"]\n    \n    # connections\n    A->op [headlabel = \"L\"; headport = nw]\n    M->op [headlabel = \"R\"; headport = ne]\n    \n    op->M [tailport = s]\n    M->output\n  }\n","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<script type="application/json" data-for="htmlwidget-09008e95719670bb4229">{"x":{"diagram":"\n  digraph cumulative_update {\n  \n    # HD input values\n    node [shape = none]\n    A [label = <A<FONT POINT-SIZE=\"8\"><SUB>i<\/SUB><\/FONT>>]\n    \n    subgraph {\n      rank = same\n    \n      # operator\n      node [shape = circle]\n      op [label = \"sum(L, R)\"]\n\n      # HD cumulative memory value\n      node [shape = plaintext]\n      M [label = <M<FONT POINT-SIZE=\"8\"><SUB>i<\/SUB><\/FONT>>]\n    }\n  \n    # HD anonymous output values\n    node [shape = plaintext]\n    output [label = \"\"]\n    \n    # connections\n    A->op [headlabel = \"L\"; headport = nw]\n    M->op [headlabel = \"R\"; headport = ne]\n    \n    op->M [tailport = s]\n    M->output\n  }\n","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
 <br>
 <p>
 <button type="button" class="btn btn-default btn-workflowr btn-workflowr-sessioninfo" data-toggle="collapse" data-target="#workflowr-sessioninfo" style="display: block;">
