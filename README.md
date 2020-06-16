@@ -40,16 +40,16 @@ with the directory-specific` README.md` files only giving the purpose of each di
 
 ## Analysis documents
 
-Added `mathjax = "local"` as an argument to `workflowr::wflow_html` in `analysis/_site.yml`
+* Add `mathjax = "local"` as an argument to `workflowr::wflow_html` in `analysis/_site.yml`
 so that the MathJax JavaScript library is bundled with the website in `docs/`
 rather than being loaded from a remote server when the website is viewed.
 This removes the dependency on the rempte server being available.
 
-```
+  ```
 output:
   workflowr::wflow_html:
     mathjax: "local"
-```
+  ```
 
 * Bibliography records for the documents in `analysis/`
 are manually exported from Zotero and stored in the `analysis/` directory.

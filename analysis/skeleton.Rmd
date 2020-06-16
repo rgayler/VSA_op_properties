@@ -81,6 +81,7 @@ in which case we would need to distill from the exploration the lessons we think
 * Something like the introduction of @schlegelComparisonVectorSymbolic2020
 
 * Note the focus on implementation (biological or artificial).
+RG says this focus is central to VSA.
 This may influence some of the mathematical choices made later.
 Emphasise that the maths is a *model* of implementable systems rather than free-standing maths.
   * RG vaguely remembers recently seeing a mention of graph-structured computation
@@ -92,6 +93,7 @@ Emphasise that the maths is a *model* of implementable systems rather than free-
   is most likely relevant in that parenthesization of math expressions to represent associativity
   translates into alternate wiring of the implementation data flow graph.
     * **&rarr;RG** Give example here with diagrams.
+    As a test of between-file cross-referencing [see](simulation.html#data-flow-graph)
   
 * A data flow graph is actually an oriented *hypergraph*,
 where hyperedges correspond to operators/functions with distinguished arguments and output,

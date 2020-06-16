@@ -23,7 +23,7 @@ because I think that would be very unwieldy
 while trying to reorganise the skeleton.
 
 
-## Data flow graph
+## Data flow graph {#data-flow-graph}
 
 Diagrams to illustrate the point that the maths needs to be compatible with implementation.
 
@@ -31,8 +31,8 @@ The graphs have a fixed topology.
 Each edge and vertex corresponds to some fixed, specific hardware.
 You are not going to have an arbitrarily large graph to deal with arbitrarily long inputs.
 
-Graphviz [documentation](https://graphviz.org/documentation/)  
-DiagrammeR [documentation](https://rich-iannone.github.io/DiagrammeR/docs.html)
+[Graphviz documentation](https://graphviz.org/documentation/)  
+[DiagrammeR documentation](https://rich-iannone.github.io/DiagrammeR/docs.html)
 
 Here is the translation of $A + B$ to a circuit.
 
@@ -240,4 +240,4 @@ grViz("
 ```
 
 
-
+As a test of within-file cross-referencing [see](#data-flow-graph)
