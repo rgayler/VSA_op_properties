@@ -40,6 +40,17 @@ with the directory-specific` README.md` files only giving the purpose of each di
 
 ## Analysis documents
 
+Added `mathjax = "local"` as an argument to `workflowr::wflow_html` in `analysis/_site.yml`
+so that the MathJax JavaScript library is bundled with the website in `docs/`
+rather than being loaded from a remote server when the website is viewed.
+This removes the dependency on the rempte server being available.
+
+```
+output:
+  workflowr::wflow_html:
+    mathjax: "local"
+```
+
 * Bibliography records for the documents in `analysis/`
 are manually exported from Zotero and stored in the `analysis/` directory.
 * The reference style sheet for the documents in `analysis/`
@@ -54,15 +65,15 @@ that need to be mirrored on GitHub.**
 The output paper is not managed by {workflowr},
 so needs some separate handling.
 
-* Files for creation of the output paper are in the `paper` directory.
+* Files for creation of the output paper are in the `paper/` directory.
   * This directory was created by the `{[rticles](https://CRAN.R-project.org/package=rticles)}` package,
   using the `PeerJ` template.
   (This will change if we find a different publication venue for the paper.)
   * The paper uses data objects and figures created by the simulation notebook
   and stored in the `output/` directory.
 
-The output paper (`paper.pdf`) is created in the `paper` directory,
-but needs to also exist in the `docs` directory
+The output paper (`paper.pdf`) is created in the `pape/` directory,
+but needs to also exist in the `docs/` directory
 so that it can be referenced from the web pages (locally and on GitHub).
 
 * After creating `paper.pdf` for the first time,
