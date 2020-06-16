@@ -242,4 +242,4 @@ grViz("
 
 As a test of within-file section cross-referencing [see](#data-flow-graph)
 
-As a test of within-file figure cross-referencing see \@ref(fig:dfg-sum-ab)
+)
