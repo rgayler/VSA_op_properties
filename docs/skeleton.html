@@ -463,20 +463,20 @@ know the exact version of the code that produced these results.</p>
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomrgaylerVSAoppropertiestreec7bfc9a35797814618f9f7d83da7f5b044dd7c42targetblankc7bfc9aa">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomrgaylerVSAoppropertiestree51946aa1e237b3485c7416c4f488ccaf15a5e762targetblank51946aaa">
 <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span>
-<strong>Repository version:</strong> <a href="https://github.com/rgayler/VSA_op_properties/tree/c7bfc9a35797814618f9f7d83da7f5b044dd7c42" target="_blank">c7bfc9a</a>
+<strong>Repository version:</strong> <a href="https://github.com/rgayler/VSA_op_properties/tree/51946aa1e237b3485c7416c4f488ccaf15a5e762" target="_blank">51946aa</a>
 </a>
 </p>
 </div>
-<div id="strongRepositoryversionstrongahrefhttpsgithubcomrgaylerVSAoppropertiestreec7bfc9a35797814618f9f7d83da7f5b044dd7c42targetblankc7bfc9aa" class="panel-collapse collapse">
+<div id="strongRepositoryversionstrongahrefhttpsgithubcomrgaylerVSAoppropertiestree51946aa1e237b3485c7416c4f488ccaf15a5e762targetblank51946aaa" class="panel-collapse collapse">
 <div class="panel-body">
 <p>
 Great! You are using Git for version control. Tracking code development and
 connecting the code version to the results is critical for reproducibility.
 </p>
 <p>
-The results in this page were generated with repository version <a href="https://github.com/rgayler/VSA_op_properties/tree/c7bfc9a35797814618f9f7d83da7f5b044dd7c42" target="_blank">c7bfc9a</a>.
+The results in this page were generated with repository version <a href="https://github.com/rgayler/VSA_op_properties/tree/51946aa1e237b3485c7416c4f488ccaf15a5e762" target="_blank">51946aa</a>.
 See the <em>Past versions</em> tab to see a history of the changes made to the
 R Markdown and HTML files.
 </p>
@@ -537,6 +537,40 @@ Message
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>
+Rmd
+</td>
+<td>
+<a href="https://github.com/rgayler/VSA_op_properties/blob/51946aa1e237b3485c7416c4f488ccaf15a5e762/analysis/skeleton.Rmd" target="_blank">51946aa</a>
+</td>
+<td>
+Ross Gayler
+</td>
+<td>
+2020-06-16
+</td>
+<td>
+wflow_publish(c(“analysis/<em>.yml", "analysis/</em>.Rmd”))
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/rgayler/VSA_op_properties/0d82a6bb047b8ed25cf5a9705f7870320565395a/docs/skeleton.html" target="_blank">0d82a6b</a>
+</td>
+<td>
+Ross Gayler
+</td>
+<td>
+2020-06-16
+</td>
+<td>
+Build site.
+</td>
+</tr>
 <tr>
 <td>
 Rmd
@@ -1094,7 +1128,7 @@ They are also of interest because of their potential relevance to neural computa
 Different researchers have devised a variety of instantiations of VSAs,
 indicating that the primary computatuional properties
 are not strongly dependent on the details that vary between instantiations.
-These instantiations have been compareed and contrasted,
+These instantiations have been compared and contrasted,
 however in this work we are approaching from the other direction
 and exploring what mathematical properties are essential to VSAs.</p>
 <p>VSAs are relatively simple systems
@@ -1115,7 +1149,7 @@ in which case we would need to distill from the exploration the lessons we think
 <ul>
 <li><p>Something like the introduction of <span class="citation">Schlegel, Neubert, &amp; Protzel (2020)</span></p></li>
 <li><p>Note the focus on implementation (biological or artificial).
-RG says this focus is central to VSA.
+<strong>RG says this focus on implementation is a defining feature of VSA.</strong>
 This may influence some of the mathematical choices made later.
 Emphasise that the maths is a <em>model</em> of implementable systems rather than free-standing maths.</p>
 <ul>
@@ -1128,13 +1162,16 @@ as a known area of study.<br />
 is most likely relevant in that parenthesization of math expressions to represent associativity
 translates into alternate wiring of the implementation data flow graph.
 <ul>
-<li><strong>→RG</strong> Give example here with diagrams.
-As a test of between-file cross-referencing <a href="simulation.html#data-flow-graph">see</a></li>
+<li><strong>→RG</strong> Give example here with diagrams.</li>
 </ul></li>
 </ul></li>
-<li><p>A data flow graph is actually an oriented <em>hypergraph</em>,
+</ul>
+<p>As a test of between-file cross-referencing <a href="simulation.html#data-flow-graph">see</a></p>
+<p>As a test of within-file figure cross-referencing see <a href="#fig:dfg-sum-ab"><strong>??</strong></a></p>
+<ul>
+<li>A data flow graph is actually an oriented <em>hypergraph</em>,
 where hyperedges correspond to operators/functions with distinguished arguments and output,
-and vertices correspond to HD vector values (thought of as ‘registers’ if you like).</p>
+and vertices correspond to HD vector values (thought of as ‘registers’ if you like).
 <ul>
 <li><strong>→CG</strong> Side question: Vector space maths seems to be written as though there’s only one vector space.
 In an implementation there are (arguably) as many vector spaces as there are vertices in the data flow hypergraph.

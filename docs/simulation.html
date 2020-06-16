@@ -549,20 +549,20 @@ makes it easier to run your code on other machines.</p>
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomrgaylerVSAoppropertiestreec7bfc9a35797814618f9f7d83da7f5b044dd7c42targetblankc7bfc9aa">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomrgaylerVSAoppropertiestree51946aa1e237b3485c7416c4f488ccaf15a5e762targetblank51946aaa">
 <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span>
-<strong>Repository version:</strong> <a href="https://github.com/rgayler/VSA_op_properties/tree/c7bfc9a35797814618f9f7d83da7f5b044dd7c42" target="_blank">c7bfc9a</a>
+<strong>Repository version:</strong> <a href="https://github.com/rgayler/VSA_op_properties/tree/51946aa1e237b3485c7416c4f488ccaf15a5e762" target="_blank">51946aa</a>
 </a>
 </p>
 </div>
-<div id="strongRepositoryversionstrongahrefhttpsgithubcomrgaylerVSAoppropertiestreec7bfc9a35797814618f9f7d83da7f5b044dd7c42targetblankc7bfc9aa" class="panel-collapse collapse">
+<div id="strongRepositoryversionstrongahrefhttpsgithubcomrgaylerVSAoppropertiestree51946aa1e237b3485c7416c4f488ccaf15a5e762targetblank51946aaa" class="panel-collapse collapse">
 <div class="panel-body">
 <p>
 Great! You are using Git for version control. Tracking code development and
 connecting the code version to the results is critical for reproducibility.
 </p>
 <p>
-The results in this page were generated with repository version <a href="https://github.com/rgayler/VSA_op_properties/tree/c7bfc9a35797814618f9f7d83da7f5b044dd7c42" target="_blank">c7bfc9a</a>.
+The results in this page were generated with repository version <a href="https://github.com/rgayler/VSA_op_properties/tree/51946aa1e237b3485c7416c4f488ccaf15a5e762" target="_blank">51946aa</a>.
 See the <em>Past versions</em> tab to see a history of the changes made to the
 R Markdown and HTML files.
 </p>
@@ -623,6 +623,40 @@ Message
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>
+Rmd
+</td>
+<td>
+<a href="https://github.com/rgayler/VSA_op_properties/blob/51946aa1e237b3485c7416c4f488ccaf15a5e762/analysis/simulation.Rmd" target="_blank">51946aa</a>
+</td>
+<td>
+Ross Gayler
+</td>
+<td>
+2020-06-16
+</td>
+<td>
+wflow_publish(c(“analysis/<em>.yml", "analysis/</em>.Rmd”))
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/rgayler/VSA_op_properties/0d82a6bb047b8ed25cf5a9705f7870320565395a/docs/simulation.html" target="_blank">0d82a6b</a>
+</td>
+<td>
+Ross Gayler
+</td>
+<td>
+2020-06-16
+</td>
+<td>
+Build site.
+</td>
+</tr>
 <tr>
 <td>
 Rmd
@@ -1127,8 +1161,13 @@ grViz(&quot;
     op-&gt;output
   }
 &quot;)</code></pre>
+<div class="figure" style="text-align: center"><span id="fig:dfg-sum-ab"></span>
 <div id="htmlwidget-a5db646266c753325e45" style="width:672px;height:480px;" class="grViz html-widget"></div>
 <script type="application/json" data-for="htmlwidget-a5db646266c753325e45">{"x":{"diagram":"\n  digraph sum_a_b {\n    \n    # HD input values\n    node [shape = none]\n    A; B\n    \n    # HD anonymous output values\n    node [shape = plaintext]\n    output [label = \"\"]\n    \n    # operator\n    node [shape = circle]\n    op [label = \"sum(L, R)\"]\n    \n    # connections\n    A->op [headlabel = \"L\"]\n    B->op [headlabel = \"R\"]\n    op->output\n  }\n","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<p class="caption">
+Figure 1: Example data flow graph for (A + B).
+</p>
+</div>
 <p>Mathematical script can be ambiguous with respect to translation to a circuit.
 For example, given <span class="math inline">\(A + B + C\)</span> and a binary <span class="math inline">\(sum\)</span> operator
 the script does not specify the order in which the <span class="math inline">\(sum\)</span> operations take place.
@@ -1276,7 +1315,8 @@ grViz(&quot;
 &quot;)</code></pre>
 <div id="htmlwidget-09008e95719670bb4229" style="width:672px;height:480px;" class="grViz html-widget"></div>
 <script type="application/json" data-for="htmlwidget-09008e95719670bb4229">{"x":{"diagram":"\n  digraph cumulative_update {\n  \n    # HD input values\n    node [shape = none]\n    A [label = <A<FONT POINT-SIZE=\"8\"><SUB>i<\/SUB><\/FONT>>]\n    \n    subgraph {\n      rank = same\n    \n      # operator\n      node [shape = circle]\n      op [label = \"sum(L, R)\"]\n\n      # HD cumulative memory value\n      node [shape = plaintext]\n      M [label = <M<FONT POINT-SIZE=\"8\"><SUB>i<\/SUB><\/FONT>>]\n    }\n  \n    # HD anonymous output values\n    node [shape = plaintext]\n    output [label = \"\"]\n    \n    # connections\n    A->op [headlabel = \"L\"; headport = nw]\n    M->op [headlabel = \"R\"; headport = ne]\n    \n    op->M [tailport = s]\n    M->output\n  }\n","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
-<p>As a test of within-file cross-referencing <a href="#data-flow-graph">see</a></p>
+<p>As a test of within-file section cross-referencing <a href="#data-flow-graph">see</a></p>
+<p>As a test of within-file figure cross-referencing see <a href="#fig:dfg-sum-ab">1</a></p>
 <br>
 <p>
 <button type="button" class="btn btn-default btn-workflowr btn-workflowr-sessioninfo" data-toggle="collapse" data-target="#workflowr-sessioninfo" style="display: block;">
