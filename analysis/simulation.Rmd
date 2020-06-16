@@ -41,7 +41,7 @@ corresponding to the two arguments to the $sum$ function,
 and that we have adopted the convention of mapping the left and right operands of $+$ 
 to the $L$ and $R$ inputs.
 
-```{r}
+```{r dfg-sum-ab, fig.cap="Example data flow graph for (A + B)."}
 library(DiagrammeR)
 # export diagrams to SVG for inclusion in output paper?
 
@@ -240,4 +240,6 @@ grViz("
 ```
 
 
-As a test of within-file cross-referencing [see](#data-flow-graph)
+As a test of within-file section cross-referencing [see](#data-flow-graph)
+
+As a test of within-file figure cross-referencing see \@ref(fig:dfg-sum-ab)

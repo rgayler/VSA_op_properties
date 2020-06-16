@@ -57,7 +57,7 @@ VSAs are a family of related approaches.
 Different researchers have devised a variety of instantiations of VSAs, 
 indicating that the primary computatuional properties
 are not strongly dependent on the details that vary between instantiations.
-These instantiations have been compareed and contrasted,
+These instantiations have been compared and contrasted,
 however in this work we are approaching from the other direction
 and exploring what mathematical properties are essential to VSAs.
 
@@ -81,7 +81,7 @@ in which case we would need to distill from the exploration the lessons we think
 * Something like the introduction of @schlegelComparisonVectorSymbolic2020
 
 * Note the focus on implementation (biological or artificial).
-RG says this focus is central to VSA.
+**RG says this focus on implementation is a defining feature of VSA.**
 This may influence some of the mathematical choices made later.
 Emphasise that the maths is a *model* of implementable systems rather than free-standing maths.
   * RG vaguely remembers recently seeing a mention of graph-structured computation
@@ -93,7 +93,10 @@ Emphasise that the maths is a *model* of implementable systems rather than free-
   is most likely relevant in that parenthesization of math expressions to represent associativity
   translates into alternate wiring of the implementation data flow graph.
     * **&rarr;RG** Give example here with diagrams.
-    As a test of between-file cross-referencing [see](simulation.html#data-flow-graph)
+    
+As a test of between-file cross-referencing [see](simulation.html#data-flow-graph)
+
+As a test of within-file figure cross-referencing see \@ref(fig:dfg-sum-ab)
   
 * A data flow graph is actually an oriented *hypergraph*,
 where hyperedges correspond to operators/functions with distinguished arguments and output,
