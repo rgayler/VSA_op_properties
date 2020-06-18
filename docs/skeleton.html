@@ -444,16 +444,16 @@ This reproducible <a href="http://rmarkdown.rstudio.com">R Markdown</a> analysis
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomrgaylerVSAoppropertiestree210d78a2744d21ecfb028ce8c61bd8f194b9c2d9targetblank210d78aa"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/rgayler/VSA_op_properties/tree/210d78a2744d21ecfb028ce8c61bd8f194b9c2d9" target="_blank">210d78a</a> </a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomrgaylerVSAoppropertiestree58c92a407a916db3eacf1ab38c48413d01884a3ctargetblank58c92a4a"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/rgayler/VSA_op_properties/tree/58c92a407a916db3eacf1ab38c48413d01884a3c" target="_blank">58c92a4</a> </a>
 </p>
 </div>
-<div id="strongRepositoryversionstrongahrefhttpsgithubcomrgaylerVSAoppropertiestree210d78a2744d21ecfb028ce8c61bd8f194b9c2d9targetblank210d78aa" class="panel-collapse collapse">
+<div id="strongRepositoryversionstrongahrefhttpsgithubcomrgaylerVSAoppropertiestree58c92a407a916db3eacf1ab38c48413d01884a3ctargetblank58c92a4a" class="panel-collapse collapse">
 <div class="panel-body">
 <p>
 Great! You are using Git for version control. Tracking code development and connecting the code version to the results is critical for reproducibility.
 </p>
 <p>
-The results in this page were generated with repository version <a href="https://github.com/rgayler/VSA_op_properties/tree/210d78a2744d21ecfb028ce8c61bd8f194b9c2d9" target="_blank">210d78a</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
+The results in this page were generated with repository version <a href="https://github.com/rgayler/VSA_op_properties/tree/58c92a407a916db3eacf1ab38c48413d01884a3c" target="_blank">58c92a4</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
 </p>
 <p>
 Note that you need to be careful to ensure that all relevant files for the analysis have been committed to Git prior to generating the results (you can use <code>wflow_publish</code> or <code>wflow_git_commit</code>). workflowr only checks the R Markdown file, but you know if there are other scripts or data files that it depends on. Below is the status of the Git repository when the results were generated:
@@ -501,6 +501,40 @@ Message
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>
+Rmd
+</td>
+<td>
+<a href="https://github.com/rgayler/VSA_op_properties/blob/58c92a407a916db3eacf1ab38c48413d01884a3c/analysis/skeleton.Rmd" target="_blank">58c92a4</a>
+</td>
+<td>
+Ross Gayler
+</td>
+<td>
+2020-06-18
+</td>
+<td>
+wflow_publish("analysis/*.Rmd")
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/rgayler/VSA_op_properties/0895a7a325fd0dc940ac1ba6b8bb4096f187d0cd/docs/skeleton.html" target="_blank">0895a7a</a>
+</td>
+<td>
+Ross Gayler
+</td>
+<td>
+2020-06-18
+</td>
+<td>
+Build site.
+</td>
+</tr>
 <tr>
 <td>
 html
@@ -1182,17 +1216,56 @@ As noted in [some other file](#some_other_file_name.htmlsome-other-ref-label)</c
 <div id="take-2" class="section level1">
 <h1>Take 2</h1>
 <p><em>After initial discussion it was decided to aim for a shorter paper. Take 2 is the skeleton for the shorter paper. Take 1 has been retained lower down to be picked over for content to be used in Take 2, and to record ideas that might be used elsewhere.</em></p>
-<div id="overview" class="section level2">
-<h2>Overview</h2>
-<p>sakhklf</p>
+<p>RG is most likely misusing mathematical terminology, so if something doesn’t make sense consider whether it makes sense as a concept if the terminology were corrected.</p>
+<p>RG is thinking of this as having two parts: mathematical/conceptual and empirical/exploratory. It is quite possible that it may still be longer than we can stomach, in which case it could be separated into two papers. However, there would still need to be some conceptual background for the empirical paper.</p>
+<p>SR has a ‘cookbook’ of useful results, definitions, theorems, etc. Anything we do here that is too detailed and/or periperal may end up being shunted to the cookbook.</p>
+<div id="overview-abstract" class="section level2">
+<h2>Overview / abstract</h2>
+<p>VSA is about using mathematical operators on very high dimensional spaces as a basis for computation. They are interesting because they are very robust to noise and implementation errors which suits them to newly emerging computer technologies which are inherently less reliable as a consequence of their extreme miniaturisation. They are also of interest because of their potential relevance to neural computation.</p>
+<p>VSAs are a family of related approaches. Different researchers have devised a variety of instantiations of VSAs, indicating that the primary computational properties are not strongly dependent on the details that vary between instantiations. These instantiations have been compared and contrasted, however in this work we are approaching from the other direction and exploring what mathematical properties are essential to VSAs.</p>
+<p>VSAs are relatively simple systems involving a high-dimensional space and a small number of mathematical operators on that space. We explore conceptually, mathematically, and empirically the mathematical properties of these entities that are needed to make VSAs computationally useful.</p>
+<p>The first half of this paper approaches VSAs from first principles and attempts to develop a minimal mathematical model of VSAs. That is, what is the minimal set of mathematical properties required by a system to be recognisably a VSA?</p>
+<p>The second half of this paper investigates a minimal realisation of a VSA based on the principles identified in the first half. RG presumes this will be based on a probabilistic parameterisation of an element-wise operator on binary values. We map out the VSA-relevant mathematical properties of the operator as a function of location in the parameter space.</p>
+<p><em>This is exploratory work, so the exploration may demonstrate that the above path is untenable, in which case we would need to distil from the exploration the lessons we think most useful for others.</em></p>
 </div>
-<div id="introduction" class="section level2">
-<h2>Introduction</h2>
-<p>kjbjbvjk</p>
+<div id="introduction-to-vsa" class="section level2">
+<h2>Introduction to VSA</h2>
+<ul>
+<li>Something like the introduction of <span class="citation">Schlegel, Neubert, &amp; Protzel (2020)</span></li>
+</ul>
 </div>
-<div id="stuff_i" class="section level2">
-<h2>Stuff_i</h2>
-<p>jsdjbjkc</p>
+<div id="part-1---mathematicalconceptual-model-of-minimal-vsa" class="section level2">
+<h2>Part 1 - Mathematical/conceptual model of minimal VSA</h2>
+<ul>
+<li>We need a set of ‘requirements’ that a system must meet in order to be accepted as a VSA. We are trying to develop a set of minimal requirements.</li>
+</ul>
+<p><em>I have split the requirements into conceptual and mathematical on the presumption that we can argue about the requirements at a conceptual level before attempting to translate them to a mathematical formalism. I want to avoid premature mathematisation and having the conceptual definitions driven by what’s easy to do mathematically. This is not mathematics.</em></p>
+<p><em>RG is strongly of the view that we are using the mathematics as a modelling tool and that our focus is VSA as natural phenomena.</em></p>
+<div id="conceptual-requirements" class="section level3">
+<h3>Conceptual requirements</h3>
+<ul>
+<li>VSA must be physically implementable (biological or artificial) computational devices
+<ul>
+<li>The appropriate sense of computation may be up for grabs</li>
+<li>Fixed, finite hardware resources</li>
+<li>Small, fixed set primitive operations</li>
+<li>Fixed topology</li>
+</ul></li>
+<li>Fixed and finite can be interpreted as implying low resolution primitive values
+<ul>
+<li>Can’t rely on the inifinite precision of reals to encode complex content into a single primitive value</li>
+</ul></li>
+</ul>
+<p>Quisque ullamcorper placerat ipsum. Cras nibh. Morbi vel justo vitae lacus tincidunt ultrices. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. In hac habitasse platea dictumst. Integer tempus convallis augue. Etiam facilisis. Nunc elementum fermentum wisi. Aenean placerat. Ut imperdiet, enim sed gravida sollicitudin, felis odio placerat quam, ac pulvinar elit purus eget enim. Nunc vitae tortor. Proin tempus nibh sit amet nisl. Vivamus quis tortor vitae risus porta vehicula.</p>
+</div>
+<div id="mathematical-restatement-of-conceptual-requirements" class="section level3">
+<h3>Mathematical restatement of conceptual requirements</h3>
+<p>Eiddo tiriog Starkweather ei hun. Yfory nibh. Pêl-droed neu ddim ond cronfa o ddatblygwyr yn gollwng. lorem Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Yr ailgyllido. tymor cyfan propaganda’r cwm. Gwrthocsidyddion hyd yn oed. Nawr elfen fudferwi cynnes. Eiddo tiriog Jasmine. Er mwyn cyllido ar gyfer sed gravida amet, felis odio placerat quam, ac pulvinar elit purus eget enim. Nawr yn byw tymheredd. Cyhoeddi nibh canol tymor. Chwerthin giât bywyd Vivamus quis tortor vehicleicula.</p>
+</div>
+</div>
+<div id="part-2---empirical-exploration-of-a-minimal-vsa" class="section level2">
+<h2>Part 2 - Empirical exploration of a minimal VSA</h2>
+<p>ʻO ka waiwai o Starkweather ponoʻī. ʻApōpō nibh. ʻO ka pīpeku a i ʻole wale ka puna wai paha o nā mea hoʻolālā. lorem ʻO Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Ka ʻaila. i kekahi manawa holoʻokoʻa propaganda awāwa. ʻO nā antiioxidants. I kēia manawa simmer element. Jasmine waiwai. I ke kālā kālā no sed gravida amet, felis odio placerat quam, ac pulvinar elit purus eget enim. Ke ola nei kēia manawa. Kau ʻia nā makahiki Midhule. O ka ʻakaʻaka o ka puka o ke ola o Vivamus quis tortor vehicula.</p>
 <hr />
 </div>
 </div>
@@ -1202,18 +1275,18 @@ As noted in [some other file](#some_other_file_name.htmlsome-other-ref-label)</c
 <p>RG expects that this will be quite a long paper because of the amount of relevant background to be covered (the empirical component will be relatively straightforward). It <strong>won’t</strong> be suitable for a classic computer science 6-page conference paper. FWIW, <a href="https://peerj.com/computer-science/">PeerJ Computer Science</a> doesn’t appear to have a page limit.</p>
 <p><strong>→SR</strong> A lot of the background information I expect to need here should probably be included in SR’s cookbook. If that is so, would it be better to treat the cookbook as the primary repository for that information and have pointers from this paper? That would make this paper shorter, but no longer self-contained. That would also raise issues about the publication order of this paper and the cookbook, and how to deal with changing content if the cookbook evolves over time.</p>
 <p><strong>→CG</strong> - For everything that is done empirically it would be helpful to have mathematical argument showing what results are expected. To the extent that is possible you could, in principle, run with the maths and drop the empirical component - but RG likes empirical demonstration to give some confidence that the maths isn’t flawed.</p>
-<div id="overview-1" class="section level2">
-<h2>Overview</h2>
+<div id="overview-abstract-1" class="section level2">
+<h2>Overview / abstract</h2>
 <p>VSA is about using mathematical operators on very high dimensional vector spaces as a basis for computation. They are interesting because they are very robust to noise and implementation errors which suits them to newly emerging computer technologies which are inherently less reliable as a consequence of their extreme miniaturisation. They are also of interest because of their potential relevance to neural computation.</p>
-<p>VSAs are a family of related approaches. Different researchers have devised a variety of instantiations of VSAs, indicating that the primary computatuional properties are not strongly dependent on the details that vary between instantiations. These instantiations have been compared and contrasted, however in this work we are approaching from the other direction and exploring what mathematical properties are essential to VSAs.</p>
+<p>VSAs are a family of related approaches. Different researchers have devised a variety of instantiations of VSAs, indicating that the primary computational properties are not strongly dependent on the details that vary between instantiations. These instantiations have been compared and contrasted, however in this work we are approaching from the other direction and exploring what mathematical properties are essential to VSAs.</p>
 <p>VSAs are relatively simple systems involving a vector space and a small number of mathematical operators on the vector space. We explore conceptually, mathematically, and empirically the mathematical properties of these entities that are needed to make VSAs computationally useful.</p>
 <p>As an example, Stefan Reimann introduced a non-associative variant of the sum operator. The non-associativity is useful to capture some behavioural asymmetries in the modelling of human memory. Stefan used a probabilistic parameterisation of an extensive tabular definition of the operator. This can probably be expanded to cover the two standard VSA binary operators. Then the algebraic properties of the operators (e.g commutativity, associativity) can be mapped as a function of location in the parameter space.</p>
 <p>This is exploratory work, so the exploration may demonstrate that the above path is untenable, in which case we would need to distill from the exploration the lessons we think most useful for others.</p>
 </div>
-<div id="introduction-1" class="section level2">
+<div id="introduction" class="section level2">
 <h2>Introduction</h2>
 <ul>
-<li><p>Something like the introduction of <span class="citation">Schlegel, Neubert, &amp; Protzel (2020)</span></p></li>
+<li><p>Something like the introduction of <span class="citation">Schlegel et al. (2020)</span></p></li>
 <li><p>Note the focus on implementation (biological or artificial). <strong>RG says this focus on implementation is a defining feature of VSA.</strong> This may influence some of the mathematical choices made later. Emphasise that the maths is a <em>model</em> of implementable systems rather than free-standing maths.</p>
 <ul>
 <li>RG vaguely remembers recently seeing a mention of graph-structured computation (i.e. data flow graphs rather than graphs as the subject of computation) as a known area of study.<br />
