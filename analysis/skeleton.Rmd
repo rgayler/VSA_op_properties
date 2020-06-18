@@ -47,7 +47,7 @@ to give some confidence that the maths isn't flawed.
 
 # Overview
 
-VSA is about using mathematical operators on very high dimensional vector sppaces as a basis for computation.
+VSA is about using mathematical operators on very high dimensional vector spaces as a basis for computation.
 They are interesting because they are very robust to noise and implementation errors
 which suits them to newly emerging computer technologies which are inherently less reliable
 as a consequence of their extreme miniaturisation.

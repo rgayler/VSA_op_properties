@@ -10,11 +10,12 @@ editor_options:
 
 This is the research website for the project "VSA operator properties".
 
-The online copy of this site is at https://rgayler.github.io/VSA_op_properties/
+This website is rendered locally on your computer in `docs/` by `R`
+and also online at https://rgayler.github.io/VSA_op_properties/ by GitHub.
 
 ---
 
-* [Simulation notebook](simulation.html)
+# [Simulation notebook](simulation.html)
 
 This notebook contains the simulations informing the output paper.
 In addition to the code, it also contains notes on the design and implementation of the simulations
@@ -27,13 +28,13 @@ because the presentation of the conclusions
 doesn't necessary follow the same path we followed to arrive at the conclusions
 and because publication venues have idiosyncratic formatting requirements.
 
-* [Skeleton paper](skeleton.html)
+# [Skeleton paper](skeleton.html)
 
 This document sketches out the contents and organisation of the final output paper.
 It also contains meta-level discussion of the paper,
 including possible future extensions.
 
-* [Output paper](paper.pdf)
+# [Output paper](paper.pdf)
 
 *This is currently a dummy paper.*
 

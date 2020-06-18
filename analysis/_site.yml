@@ -14,11 +14,10 @@ navbar:
     text: Source code
     href: https://github.com/rgayler/VSA_op_properties
 output:
-  bookdown::html_document2:
-    base_format: workflowr::wflow_html
-    toc: yes
-    toc_float: yes
-    theme: cosmo
-    highlight: textmate
-    mathjax: "local"
+    workflowr::wflow_html:
+      toc: yes
+      toc_float: yes
+      theme: cosmo
+      highlight: textmate
+      mathjax: "local"
 

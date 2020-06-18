@@ -22,6 +22,12 @@ I don't want to merge the two documents into one
 because I think that would be very unwieldy
 while trying to reorganise the skeleton.
 
+```{r setup}
+# chunk labeled 'setup' automatically executed on R session restart
+
+library(DiagrammeR) # for GraphViz diagrams
+```
+
 
 ## Data flow graph {#data-flow-graph}
 
@@ -42,7 +48,6 @@ and that we have adopted the convention of mapping the left and right operands o
 to the $L$ and $R$ inputs.
 
 ```{r dfg-sum-ab, fig.cap="Example data flow graph for (A + B)."}
-library(DiagrammeR)
 # export diagrams to SVG for inclusion in output paper?
 
 # A + B
