@@ -40,9 +40,15 @@ that need to be mirrored on GitHub.
   and meta-level notes about the content of the paper and the simulations to support the paper.
   * `paper/paper.Rmd` contains the final output paper.
 
+<<<<<<< HEAD
 *Refer to John Blischak's https://github.com/jdblischak/singleCellSeq 
 (created before he developed  [`{workflowr}`](https://github.com/jdblischak/workflowr)) 
 for ideas on project organisation.*
+=======
+**Refer to John Blischak's https://github.com/jdblischak/singleCellSeq 
+(created before  [`{workflowr}`](https://github.com/jdblischak/workflowr)) 
+for ideas on project organisation.**
+>>>>>>> master
 
 ## Installation
 
