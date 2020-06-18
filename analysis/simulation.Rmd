@@ -15,12 +15,17 @@ it contains notes on the coding and interpretation of the simulations.
 Data and figures to be used in the output paper
 must be saved to the `output\` directory.
 
-Ideally there would be some way of cross-referencing points in the `skeleton` document
-with code chunks and text in the `simulation` document
-but this doesn't seem to be possible when using `{workflowr}`.
-I don't want to merge the two documents into one
-because I think that would be very unwieldy
-while trying to reorganise the skeleton.
+The only cross-references possible are to section headers.
+These can be within- or between-file cross-references.
+
+Use only user-assigned section reference labels (instead of reference labels automatically generated from the section header text),
+so that the section header text can be changed without changing any reference labels that are used, e.g.
+
+  ```
+  ## Some text for a section header {#a-user-defined-ref-label}
+
+  As noted in [some other file](#some_other_file_name.htmlsome-other-ref-label)
+  ```
 
 ```{r setup}
 # chunk labeled 'setup' automatically executed on R session restart
@@ -28,6 +33,7 @@ while trying to reorganise the skeleton.
 library(DiagrammeR) # for GraphViz diagrams
 ```
 
+---
 
 ## Data flow graph {#data-flow-graph}
 

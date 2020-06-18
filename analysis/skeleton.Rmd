@@ -14,14 +14,46 @@ It also contains some meta-level notes.
 
 Notation: **&rarr;XX** indicates a question or action aimed at person *XX*.
 
-Ideally there would be some way of cross-referencing points in the `skeleton` document
-with code chunks and text in the `simulation` document
-but this doesn't seem to be possible when using `{workflowr}`.
-I don't want to merge the two documents into one
-because I think that would be very unwieldy
-while trying to reorganise the skeleton.
+The only cross-references possible are to section headers.
+These can be within- or between-file cross-references.
+
+Use only user-assigned section reference labels (instead of reference labels automatically generated from the section header text),
+so that the section header text can be changed without changing any reference labels that are used, e.g.
+
+  ```
+  ## Some text for a section header {#a-user-defined-ref-label}
+
+  As noted in [some other file](#some_other_file_name.htmlsome-other-ref-label)
+  ```
 
 ---
+
+# Take 2
+
+*After initial discussion it was decided to aim for a shorter paper.
+Take 2 is the skeleton for the shorter paper.
+Take 1 has been retained lower down
+to be picked over for content to be used in Take 2,
+and to record ideas that might be used elsewhere.*
+
+## Overview
+
+sakhklf
+
+## Introduction
+
+kjbjbvjk
+
+## Stuff_i
+
+jsdjbjkc
+
+---
+
+# Take 1
+
+*Take 1 is the first attempt at a skeleton
+that was subsequently abandoned as being too long.*
 
 RG expects that this will be quite a long paper
 because of the amount of relevant background to be covered
@@ -45,7 +77,7 @@ run with the maths and drop the empirical component -
 but RG likes empirical demonstration
 to give some confidence that the maths isn't flawed.
 
-# Overview
+## Overview
 
 VSA is about using mathematical operators on very high dimensional vector spaces as a basis for computation.
 They are interesting because they are very robust to noise and implementation errors
@@ -76,7 +108,7 @@ can be mapped as a function of location in the parameter space.
 This is exploratory work, so the exploration may demonstrate that the above path is untenable,
 in which case we would need to distill from the exploration the lessons we think most useful for others.
 
-# Introduction
+## Introduction
 
 * Something like the introduction of @schlegelComparisonVectorSymbolic2020
 
@@ -96,8 +128,6 @@ Emphasise that the maths is a *model* of implementable systems rather than free-
     
 As a test of between-file cross-referencing [see](simulation.html#data-flow-graph)
 
-As a test of within-file figure cross-referencing see \@ref(fig:dfg-sum-ab)
-  
 * A data flow graph is actually an oriented *hypergraph*,
 where hyperedges correspond to operators/functions with distinguished arguments and output,
 and vertices correspond to HD vector values (thought of as 'registers' if you like).
@@ -112,8 +142,6 @@ and vertices correspond to HD vector values (thought of as 'registers' if you li
     Given that arbitrariness, every connection between two registers is a permutation.
     * Also, in mathematical and artificial systems we can easily have permutations and their inverses,
     whereas in biological systems inverse permutations are implausible.
-
-# Content
 
 ## Basic set of VSA operators
 
@@ -221,7 +249,7 @@ or are unary and binary operators fundamental in some sense?
 * Diagonal outer-product compressions are element-wise
   * Do all algebraic properties follow from considering only one element? (CG?)
   
-### Probabilistic parameterisation of single-element binary operator {#prob-param}
+## Probabilistic parameterisation of single-element binary operator {#prob-param}
 
 * Focus on implementation means that operator definition must be 'local'
 (i.e. output must depend only on the inputs and locally available information)
@@ -235,7 +263,7 @@ or are unary and binary operators fundamental in some sense?
 * Probabilistic selection of constants raises the issue of density and density-preserving operations.
   * draw the parallel to normalisation in HRR and similar VSAs?
 
-### Map of operator properties
+## Map of operator properties
 
 * Commutativity and associativity
   * **&rarr;CG** Is that all? Are there other algebraic properties that are fundamental?
@@ -243,7 +271,7 @@ or are unary and binary operators fundamental in some sense?
 * VSA distributes wrt product and permutation
 * Distributivity is important implementation property because it gives parallelism for free
 
-# References
+## References
 
 * The papers currently in the Zotero group library are probable references.
   * RG may add some more structure to the group library if needed.
