@@ -444,16 +444,16 @@ This reproducible <a href="http://rmarkdown.rstudio.com">R Markdown</a> analysis
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomrgaylerVSAoppropertiestreeeda51eb0d31e597ba217a59681c657aba18d487atargetblankeda51eba"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/rgayler/VSA_op_properties/tree/eda51eb0d31e597ba217a59681c657aba18d487a" target="_blank">eda51eb</a> </a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomrgaylerVSAoppropertiestreea36c75edcee174c6d17b66c7e4717c44e3142b53targetblanka36c75ea"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/rgayler/VSA_op_properties/tree/a36c75edcee174c6d17b66c7e4717c44e3142b53" target="_blank">a36c75e</a> </a>
 </p>
 </div>
-<div id="strongRepositoryversionstrongahrefhttpsgithubcomrgaylerVSAoppropertiestreeeda51eb0d31e597ba217a59681c657aba18d487atargetblankeda51eba" class="panel-collapse collapse">
+<div id="strongRepositoryversionstrongahrefhttpsgithubcomrgaylerVSAoppropertiestreea36c75edcee174c6d17b66c7e4717c44e3142b53targetblanka36c75ea" class="panel-collapse collapse">
 <div class="panel-body">
 <p>
 Great! You are using Git for version control. Tracking code development and connecting the code version to the results is critical for reproducibility.
 </p>
 <p>
-The results in this page were generated with repository version <a href="https://github.com/rgayler/VSA_op_properties/tree/eda51eb0d31e597ba217a59681c657aba18d487a" target="_blank">eda51eb</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
+The results in this page were generated with repository version <a href="https://github.com/rgayler/VSA_op_properties/tree/a36c75edcee174c6d17b66c7e4717c44e3142b53" target="_blank">a36c75e</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
 </p>
 <p>
 Note that you need to be careful to ensure that all relevant files for the analysis have been committed to Git prior to generating the results (you can use <code>wflow_publish</code> or <code>wflow_git_commit</code>). workflowr only checks the R Markdown file, but you know if there are other scripts or data files that it depends on. Below is the status of the Git repository when the results were generated:
@@ -467,6 +467,8 @@ Ignored files:
 Unstaged changes:
     Modified:   README.md
     Modified:   analysis/README.md
+    Modified:   output/README.md
+    Modified:   paper/README.md
     Modified:   paper/paper.Rmd
     Modified:   paper/paper.tex
     Modified:   paper/paper_files/figure-latex/results-1.pdf
@@ -509,6 +511,40 @@ Message
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>
+Rmd
+</td>
+<td>
+<a href="https://github.com/rgayler/VSA_op_properties/blob/a36c75edcee174c6d17b66c7e4717c44e3142b53/analysis/skeleton.Rmd" target="_blank">a36c75e</a>
+</td>
+<td>
+Ross Gayler
+</td>
+<td>
+2020-06-18
+</td>
+<td>
+Clean up project structure. Start Take 2
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/rgayler/VSA_op_properties/329c4e666d1f5df4b6d7bd6dd63531e6b6d7f83e/docs/skeleton.html" target="_blank">329c4e6</a>
+</td>
+<td>
+Ross Gayler
+</td>
+<td>
+2020-06-18
+</td>
+<td>
+Build site.
+</td>
+</tr>
 <tr>
 <td>
 Rmd
@@ -1113,21 +1149,45 @@ Initial project structure
 </div>
 <p>This is the skeleton of the output paper. It also contains some meta-level notes.</p>
 <p>Notation: <strong>→XX</strong> indicates a question or action aimed at person <em>XX</em>.</p>
-<p>Ideally there would be some way of cross-referencing points in the <code>skeleton</code> document with code chunks and text in the <code>simulation</code> document but this doesn’t seem to be possible when using <code>{workflowr}</code>. I don’t want to merge the two documents into one because I think that would be very unwieldy while trying to reorganise the skeleton.</p>
+<p>The only cross-references possible are to section headers. These can be within- or between-file cross-references.</p>
+<p>Use only user-assigned section reference labels (instead of reference labels automatically generated from the section header text), so that the section header text can be changed without changing any reference labels that are used, e.g.</p>
+<pre><code>## Some text for a section header {#a-user-defined-ref-label}
+
+As noted in [some other file](#some_other_file_name.htmlsome-other-ref-label)</code></pre>
 <hr />
+<div id="take-2" class="section level1">
+<h1>Take 2</h1>
+<p><em>After initial discussion it was decided to aim for a shorter paper. Take 2 is the skeleton for the shorter paper. Take 1 has been retained lower down to be picked over for content to be used in Take 2, and to record ideas that might be used elsewhere.</em></p>
+<div id="overview" class="section level2">
+<h2>Overview</h2>
+<p>sakhklf</p>
+</div>
+<div id="introduction" class="section level2">
+<h2>Introduction</h2>
+<p>kjbjbvjk</p>
+</div>
+<div id="stuff_i" class="section level2">
+<h2>Stuff_i</h2>
+<p>jsdjbjkc</p>
+<hr />
+</div>
+</div>
+<div id="take-1" class="section level1">
+<h1>Take 1</h1>
+<p><em>Take 1 is the first attempt at a skeleton that was subsequently abandoned as being too long.</em></p>
 <p>RG expects that this will be quite a long paper because of the amount of relevant background to be covered (the empirical component will be relatively straightforward). It <strong>won’t</strong> be suitable for a classic computer science 6-page conference paper. FWIW, <a href="https://peerj.com/computer-science/">PeerJ Computer Science</a> doesn’t appear to have a page limit.</p>
 <p><strong>→SR</strong> A lot of the background information I expect to need here should probably be included in SR’s cookbook. If that is so, would it be better to treat the cookbook as the primary repository for that information and have pointers from this paper? That would make this paper shorter, but no longer self-contained. That would also raise issues about the publication order of this paper and the cookbook, and how to deal with changing content if the cookbook evolves over time.</p>
 <p><strong>→CG</strong> - For everything that is done empirically it would be helpful to have mathematical argument showing what results are expected. To the extent that is possible you could, in principle, run with the maths and drop the empirical component - but RG likes empirical demonstration to give some confidence that the maths isn’t flawed.</p>
-<div id="overview" class="section level1">
-<h1>Overview</h1>
+<div id="overview-1" class="section level2">
+<h2>Overview</h2>
 <p>VSA is about using mathematical operators on very high dimensional vector spaces as a basis for computation. They are interesting because they are very robust to noise and implementation errors which suits them to newly emerging computer technologies which are inherently less reliable as a consequence of their extreme miniaturisation. They are also of interest because of their potential relevance to neural computation.</p>
 <p>VSAs are a family of related approaches. Different researchers have devised a variety of instantiations of VSAs, indicating that the primary computatuional properties are not strongly dependent on the details that vary between instantiations. These instantiations have been compared and contrasted, however in this work we are approaching from the other direction and exploring what mathematical properties are essential to VSAs.</p>
 <p>VSAs are relatively simple systems involving a vector space and a small number of mathematical operators on the vector space. We explore conceptually, mathematically, and empirically the mathematical properties of these entities that are needed to make VSAs computationally useful.</p>
 <p>As an example, Stefan Reimann introduced a non-associative variant of the sum operator. The non-associativity is useful to capture some behavioural asymmetries in the modelling of human memory. Stefan used a probabilistic parameterisation of an extensive tabular definition of the operator. This can probably be expanded to cover the two standard VSA binary operators. Then the algebraic properties of the operators (e.g commutativity, associativity) can be mapped as a function of location in the parameter space.</p>
 <p>This is exploratory work, so the exploration may demonstrate that the above path is untenable, in which case we would need to distill from the exploration the lessons we think most useful for others.</p>
 </div>
-<div id="introduction" class="section level1">
-<h1>Introduction</h1>
+<div id="introduction-1" class="section level2">
+<h2>Introduction</h2>
 <ul>
 <li><p>Something like the introduction of <span class="citation">Schlegel, Neubert, &amp; Protzel (2020)</span></p></li>
 <li><p>Note the focus on implementation (biological or artificial). <strong>RG says this focus on implementation is a defining feature of VSA.</strong> This may influence some of the mathematical choices made later. Emphasise that the maths is a <em>model</em> of implementable systems rather than free-standing maths.</p>
@@ -1142,7 +1202,6 @@ Initial project structure
 </ul></li>
 </ul>
 <p>As a test of between-file cross-referencing <a href="simulation.html#data-flow-graph">see</a></p>
-<p>As a test of within-file figure cross-referencing see @ref(fig:dfg-sum-ab)</p>
 <ul>
 <li>A data flow graph is actually an oriented <em>hypergraph</em>, where hyperedges correspond to operators/functions with distinguished arguments and output, and vertices correspond to HD vector values (thought of as ‘registers’ if you like).
 <ul>
@@ -1155,8 +1214,6 @@ Initial project structure
 </ul></li>
 </ul>
 </div>
-<div id="content" class="section level1">
-<h1>Content</h1>
 <div id="basic-set-of-vsa-operators" class="section level2">
 <h2>Basic set of VSA operators</h2>
 <ul>
@@ -1295,8 +1352,9 @@ Initial project structure
 <li>Do all algebraic properties follow from considering only one element? (CG?)</li>
 </ul></li>
 </ul>
-<div id="prob-param" class="section level3">
-<h3>Probabilistic parameterisation of single-element binary operator</h3>
+</div>
+<div id="prob-param" class="section level2">
+<h2>Probabilistic parameterisation of single-element binary operator</h2>
 <ul>
 <li>Focus on implementation means that operator definition must be ‘local’ (i.e. output must depend only on the inputs and locally available information)
 <ul>
@@ -1314,8 +1372,8 @@ Initial project structure
 </ul></li>
 </ul>
 </div>
-<div id="map-of-operator-properties" class="section level3">
-<h3>Map of operator properties</h3>
+<div id="map-of-operator-properties" class="section level2">
+<h2>Map of operator properties</h2>
 <ul>
 <li>Commutativity and associativity
 <ul>
@@ -1326,10 +1384,8 @@ Initial project structure
 <li>Distributivity is important implementation property because it gives parallelism for free</li>
 </ul>
 </div>
-</div>
-</div>
-<div id="references" class="section level1">
-<h1>References</h1>
+<div id="references" class="section level2">
+<h2>References</h2>
 <ul>
 <li><p>The papers currently in the Zotero group library are probable references.</p>
 <ul>
@@ -1359,6 +1415,7 @@ Initial project structure
 </div>
 <div id="ref-venkatasubramanianJohnsonLindenstraussTransformEmpirical2011">
 <p>Venkatasubramanian, S., &amp; Wang, Q. (2011). <em>The Johnson-Lindenstrauss Transform: An Empirical Study</em>. 164–173.</p>
+</div>
 </div>
 </div>
 </div>

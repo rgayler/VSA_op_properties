@@ -24,7 +24,7 @@ abstract: >
   It can also be on *multiple* lines.
 header-includes: >
   \usepackage{lipsum}
-bibliography: sample.bib
+bibliography: ../analysis/VSA_operators.bibtex
 output:
   bookdown::pdf_book:
     base_format: rticles::peerj_article # for using bookdown features like \@ref()
@@ -104,7 +104,7 @@ Table: (\#tab:widgets) An Example Table.
 
 ## Citations {-}
 
-LaTeX formats citations and references automatically using the bibliography records in your .bib file, which you can edit via the project menu. Use the cite command for an inline citation, like @Figueredo:2009dg, and the citep command for a citation in parentheses [@Figueredo:2009dg].
+LaTeX formats citations and references automatically using the bibliography records in your .bib file, which you can edit via the project menu. Use the cite command for an inline citation, like @schlegelComparisonVectorSymbolic2020, and the citep command for a citation in parentheses [@schlegelComparisonVectorSymbolic2020].
 
 ## Mathematics {-}
 
