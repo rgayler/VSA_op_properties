@@ -23,7 +23,7 @@ so that the section header text can be changed without changing any reference la
   ```
   ## Some text for a section header {#a-user-defined-ref-label}
 
-  As noted in [some other file](#some_other_file_name.htmlsome-other-ref-label)
+  As noted in [some other file](#some_other_file_name.html#some-other-ref-label)
   ```
 
 ---
