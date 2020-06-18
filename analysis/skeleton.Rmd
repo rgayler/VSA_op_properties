@@ -36,17 +36,107 @@ Take 1 has been retained lower down
 to be picked over for content to be used in Take 2,
 and to record ideas that might be used elsewhere.*
 
-## Overview
+RG is most likely misusing mathematical terminology,
+so if something doesn't make sense
+consider whether it makes sense as a concept if the terminology were corrected.
 
-sakhklf
+RG is thinking of this as having two parts:
+mathematical/conceptual and empirical/exploratory.
+It is quite possible that it may still be longer than we can stomach,
+in which case it could be separated into two papers.
+However, there would still need to be some conceptual background for the empirical paper.
 
-## Introduction
+SR has a 'cookbook' of useful results, definitions, theorems, etc.
+Anything we do here that is too detailed and/or periperal may end up being shunted to the cookbook.
 
-kjbjbvjk
+## Overview / abstract
 
-## Stuff_i
+VSA is about using mathematical operators on very high dimensional spaces as a basis for computation.
+They are interesting because they are very robust to noise and implementation errors
+which suits them to newly emerging computer technologies which are inherently less reliable
+as a consequence of their extreme miniaturisation.
+They are also of interest because of their potential relevance to neural computation.
 
-jsdjbjkc
+VSAs are a family of related approaches.
+Different researchers have devised a variety of instantiations of VSAs, 
+indicating that the primary computational properties
+are not strongly dependent on the details that vary between instantiations.
+These instantiations have been compared and contrasted,
+however in this work we are approaching from the other direction
+and exploring what mathematical properties are essential to VSAs.
+
+VSAs are relatively simple systems
+involving a high-dimensional space and a small number of mathematical operators on that space.
+We explore conceptually, mathematically, and empirically the mathematical properties of these entities
+that are needed to make VSAs computationally useful.
+
+The first half of this paper approaches VSAs from first principles
+and attempts to develop a minimal mathematical model of VSAs.
+That is, what is the minimal set of mathematical properties
+required by a system to be recognisably a VSA?
+
+The second half of this paper investigates a minimal realisation of a VSA
+based on the principles identified in the first half.
+RG presumes this will be based on a probabilistic parameterisation
+of an element-wise operator on binary values.
+We map out the VSA-relevant mathematical properties of the operator
+as a function of location in the parameter space.
+
+*This is exploratory work, so the exploration may demonstrate that the above path is untenable,
+in which case we would need to distil from the exploration the lessons we think most useful for others.*
+
+## Introduction to VSA
+
+* Something like the introduction of @schlegelComparisonVectorSymbolic2020
+
+## Part 1 - Mathematical/conceptual model of minimal VSA
+
+* We need a set of 'requirements' that a system must meet
+in order to be accepted as a VSA.
+We are trying to develop a set of minimal requirements.
+
+*I have split the requirements into conceptual and mathematical
+on the presumption that we can argue about the requirements at a conceptual level
+before attempting to translate them to a mathematical formalism.
+I want to avoid premature mathematisation
+and having the conceptual definitions driven by what's easy to do mathematically.
+This is not mathematics.*
+
+*RG is strongly of the view that we are using the mathematics as a modelling tool
+and that our focus is VSA as natural phenomena.*
+
+### Conceptual requirements
+
+* VSA must be physically implementable  (biological or artificial) computational devices
+  * The appropriate sense of computation may be up for grabs
+  * Fixed, finite hardware resources
+  * Small, fixed set primitive operations
+  * Fixed topology
+  
+* Fixed and finite can be interpreted as implying low resolution primitive values
+  * Can't rely on the inifinite precision of reals to encode complex content into a single primitive value
+
+Quisque ullamcorper placerat ipsum. Cras nibh. Morbi vel justo vitae lacus tincidunt ultrices. Lorem
+ipsum dolor sit amet, consectetuer adipiscing elit. In hac habitasse platea dictumst. Integer tempus
+convallis augue. Etiam facilisis. Nunc elementum fermentum wisi. Aenean placerat. Ut imperdiet, enim
+sed gravida sollicitudin, felis odio placerat quam, ac pulvinar elit purus eget enim. Nunc vitae tortor.
+Proin tempus nibh sit amet nisl. Vivamus quis tortor vitae risus porta vehicula.
+
+### Mathematical restatement of conceptual requirements
+
+Eiddo tiriog Starkweather ei hun. Yfory nibh. Pêl-droed neu ddim ond cronfa o ddatblygwyr yn gollwng. lorem
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Yr ailgyllido. tymor cyfan
+propaganda'r cwm. Gwrthocsidyddion hyd yn oed. Nawr elfen fudferwi cynnes. Eiddo tiriog Jasmine. Er mwyn cyllido ar gyfer
+sed gravida amet, felis odio placerat quam, ac pulvinar elit purus eget enim. Nawr yn byw tymheredd.
+Cyhoeddi nibh canol tymor. Chwerthin giât bywyd Vivamus quis tortor vehicleicula.
+
+## Part 2 - Empirical exploration of a minimal VSA
+
+ʻO ka waiwai o Starkweather ponoʻī. ʻApōpō nibh. ʻO ka pīpeku a i ʻole wale ka puna wai paha o nā mea hoʻolālā. lorem
+ʻO Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Ka ʻaila. i kekahi manawa holoʻokoʻa
+propaganda awāwa. ʻO nā antiioxidants. I kēia manawa simmer element. Jasmine waiwai. I ke kālā kālā no
+sed gravida amet, felis odio placerat quam, ac pulvinar elit purus eget enim. Ke ola nei kēia manawa.
+Kau ʻia nā makahiki Midhule. O ka ʻakaʻaka o ka puka o ke ola o Vivamus quis tortor vehicula.
 
 ---
 
@@ -77,7 +167,7 @@ run with the maths and drop the empirical component -
 but RG likes empirical demonstration
 to give some confidence that the maths isn't flawed.
 
-## Overview
+## Overview / abstract
 
 VSA is about using mathematical operators on very high dimensional vector spaces as a basis for computation.
 They are interesting because they are very robust to noise and implementation errors
@@ -87,7 +177,7 @@ They are also of interest because of their potential relevance to neural computa
 
 VSAs are a family of related approaches.
 Different researchers have devised a variety of instantiations of VSAs, 
-indicating that the primary computatuional properties
+indicating that the primary computational properties
 are not strongly dependent on the details that vary between instantiations.
 These instantiations have been compared and contrasted,
 however in this work we are approaching from the other direction
