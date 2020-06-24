@@ -12,11 +12,15 @@ editor_options:
 This is the skeleton of the output paper.
 It also contains some meta-level notes.
 
-Notation: **&rarr;XX** indicates a question or action aimed at person *XX*.
+Notation: 
+
+* **&rarr;XX** indicates a question or action aimed at person *XX*.
+
+* Where meta-level commentary is mixed with the text of the skeleton
+it is distinguished by being in *italic* script.
 
 The only cross-references possible are to section headers.
 These can be within- or between-file cross-references.
-
 Use only user-assigned section reference labels (instead of reference labels automatically generated from the section header text),
 so that the section header text can be changed without changing any reference labels that are used, e.g.
 
@@ -36,18 +40,18 @@ Take 1 has been retained lower down
 to be picked over for content to be used in Take 2,
 and to record ideas that might be used elsewhere.*
 
-RG is most likely misusing mathematical terminology,
+*RG is most likely misusing mathematical terminology,
 so if something doesn't make sense
-consider whether it makes sense as a concept if the terminology were corrected.
+consider whether it makes sense as a concept if the terminology were corrected.*
 
-RG is thinking of this as having two parts:
+*RG is thinking of this as having two parts:
 mathematical/conceptual and empirical/exploratory.
 It is quite possible that it may still be longer than we can stomach,
 in which case it could be separated into two papers.
-However, there would still need to be some conceptual background for the empirical paper.
+However, there would still need to be some conceptual background for the empirical paper.*
 
-SR has a 'cookbook' of useful results, definitions, theorems, etc.
-Anything we do here that is too detailed and/or periperal may end up being shunted to the cookbook.
+*SR has a 'cookbook' of useful results, definitions, theorems, etc.
+Anything we do here that is too detailed and/or peripheral may end up being shunted to the cookbook.*
 
 ## Overview / abstract
 
@@ -106,6 +110,12 @@ This is not mathematics.*
 and that our focus is VSA as natural phenomena.*
 
 ### Conceptual requirements
+
+*RG tried starting with requirements
+but it seemed like arbitrarily pulling requirements from the air,
+so I took @smolenskyTensorProductVariable1990
+as the conceptual precursor of VSA
+and attempted to extract the requirements from that.*
 
 * VSA must be physically implementable  (biological or artificial) computational devices
   * The appropriate sense of computation may be up for grabs
